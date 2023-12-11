@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import QuestCard from "./pages/QuestCard";
 import Question from "./pages/Question";
 import Points from "./pages/Points";
+import Mobile from "./mobile/Mobile";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/points" element={<Points />} />
+          <Route path="/mobile" element={<Mobile />} />
           <Route path="/quest/:difficulty" element={<QuestCard />} />
           <Route path="/quest/:difficulty/:number" element={<Question />} />
           {/* Add more routes for different pages if needed */}

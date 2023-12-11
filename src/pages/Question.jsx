@@ -60,8 +60,10 @@ const Question = () => {
 
   return (
     <div className="container">
-      <div className="flex flex-col justify-center items-center mt-10 border border-[#333] p-3">
-        <h1 className="text-4xl sm:text-5xl font-bold">{question}</h1>
+      <div className="flex flex-col justify-center items-center mt-10 border border-[#333] p-3 gap-3">
+        <h1 className="text-4xl sm:text-5xl font-bold text-center">
+          {question}
+        </h1>
         <p>{description}</p>
 
         <div className="flex gap-5 border border-[#333] p-3 w-full justify-between">
