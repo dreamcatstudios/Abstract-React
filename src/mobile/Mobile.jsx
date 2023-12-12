@@ -1,6 +1,8 @@
 import React from "react";
 
 const Mobile = () => {
+  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+
   return (
     <div className="container">
       <div className="flex flex-col w-64 h-[30rem] mt-7">
@@ -8,7 +10,7 @@ const Mobile = () => {
           <div className="flex flex-col h-full ">
             {/* Notch Code */}
             <div className="w-full flex justify-around ">
-              <h1 className="text-white">Time</h1>
+              <h1 className="text-white">{time}</h1>
               <div className="bg-black  p-[12px] rounded-[100%]"></div>
               <div class="flex gap-1" data-v-4a86e42e="">
                 <svg
@@ -51,7 +53,7 @@ const Mobile = () => {
             </div>
             {/* Time Code */}
             <div className=" items-center justify-center flex h-full">
-              <h1 className="text-5xl text-center">12:00</h1>
+              <h1 className="text-5xl text-center">{time}</h1>
             </div>
             {/* Apps code */}
             <div className="grid grid-cols-2 gap-3 p-5">

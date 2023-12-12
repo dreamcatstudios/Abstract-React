@@ -31,10 +31,8 @@ const Homepage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen container">
-      <div className="mt-7 lg:mt-0">
-        <h1 className="text-4xl sm:text-5xl font-bold">Abstract - React</h1>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 ">
+      <div className="mt-7 lg:mt-0"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 p-6 ">
         {levels.map((item, index) => (
           <Link
             key={index}
