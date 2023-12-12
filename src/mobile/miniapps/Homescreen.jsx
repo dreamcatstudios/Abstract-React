@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { pushApp } from "../store/MobileStore";
+import Settings from "./Settings";
 
 const Homescreen = () => {
   const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+  const [date, setDate] = React.useState(new Date().toLocaleDateString());
+
+  const apps = {
+    settings: "settings",
+    gallery: "gallery",
+  };
+
+  const dispatch = useDispatch();
+
+  const onAppClick = (app) => {
+    dispatch(pushApp(app));
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+      setDate(new Date().toLocaleDateString());
+    }, 1000);
+    // Cleanup function
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col justify-center items-center relative h-full bg-gradient-to-r from-blue-800 to-indigo-900">
+    <div className="flex rounded-md flex-col justify-center items-center relative h-full bg-gradient-to-r from-blue-800 to-indigo-900">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
         <h1 className="text-white">{time}</h1>
@@ -53,14 +80,17 @@ const Homescreen = () => {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col">
           <h1 className="text-white  text-4xl font-bold text-center mt-10">
-            12:00
+            {time.slice(0, 7)}
           </h1>
-          <p className="text-center">12/12/2023</p>
+          <p className="text-center">{date}</p>
         </div>
 
         {/* Apps code */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+          <div
+            onClick={() => onAppClick(apps.settings)}
+            className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+          >
             <svg
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
@@ -75,7 +105,7 @@ const Homescreen = () => {
               ></path>
             </svg>
           </div>
-          <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+          <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
             <svg
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
@@ -90,7 +120,10 @@ const Homescreen = () => {
               ></path>
             </svg>
           </div>
-          <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+          <div
+            onClick={() => onAppClick(apps.gallery)}
+            className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+          >
             <svg
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
@@ -100,12 +133,12 @@ const Homescreen = () => {
               data-v-e4c37606=""
             >
               <path
+                d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm3 2a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5zM4 18v2h16v-6l-3-3l-6 6l-3-3l-4 4z"
                 fill="currentColor"
-                d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8m5 9v-2h-2v2h2m-4 0v-2h-2v2h2m-4 0v-2H7v2h2Z"
               ></path>
             </svg>
           </div>
-          <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+          <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
             <svg
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
@@ -116,7 +149,7 @@ const Homescreen = () => {
             >
               <path
                 fill="currentColor"
-                d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8m5 9v-2h-2v2h2m-4 0v-2h-2v2h2m-4 0v-2H7v2h2Z"
+                d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
               ></path>
             </svg>
           </div>

@@ -1,12 +1,12 @@
 import React from "react";
 
-const Settings = () => {
+const Gallery = () => {
   const [time, setTime] = React.useState(new Date().toLocaleTimeString());
   return (
-    <div className="flex flex-col justify-center items-center relative h-full bg-white ">
+    <div className="flex rounded-md  flex-col justify-center items-center relative h-full bg-black ">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
-        <h1 className="text-black">{time}</h1>
+        <h1 className="text-white">{time}</h1>
         <div className="bg-black p-[12px] rounded-[100%]"></div>
         <div class="flex gap-1" data-v-4a86e42e="">
           <svg
@@ -14,7 +14,7 @@ const Settings = () => {
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            className="text-black"
+            className="text-white"
             data-v-4a86e42e=""
           >
             <path
@@ -27,7 +27,7 @@ const Settings = () => {
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            className="text-black"
+            className="text-white"
             data-v-4a86e42e=""
           >
             <path
@@ -40,7 +40,7 @@ const Settings = () => {
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            className="text-black"
+            className="text-white"
             data-v-4a86e42e=""
           >
             <path
@@ -52,39 +52,39 @@ const Settings = () => {
       </div>
       {/* Notch Code */}
 
-      {/*<--- Settings code ---> */}
-      <div className="w-full overflow-scroll mt-12">
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Battery</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Sound</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Network</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Security</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Apps</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">About</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Storage</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Time</h1>
-        </div>
-        <div className="border p-3 w-full flex flex-col">
-          <h1 className="text-black">Permissions</h1>
+      {/*<--- Gallery code ---> */}
+      <div className=" overflow-scroll mt-12">
+        <h1 className="text-2xl text-white font-bold pl-2">Gallery</h1>
+        <div className="grid grid-cols-2 gap-2 p-2">
+          <div>
+            <img src="https://picsum.photos/200/300?random=1" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=2" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=3" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=4" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=5" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=6" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=7" />
+          </div>
+          <div>
+            <img src="https://picsum.photos/200/300?random=8" />
+          </div>
         </div>
       </div>
-      {/*<--- Settings code ---> */}
+      {/*<--- Gallery code ---> */}
     </div>
   );
 };
 
-export default Settings;
+export default Gallery;
