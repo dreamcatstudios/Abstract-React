@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Homescreen from "./miniapps/Homescreen";
 import { popApp } from "./store/MobileStore";
-import Settings from "./miniapps/Settings";
+import    Settings from "./miniapps/Settings";
 import Gallery from "./miniapps/Gallery";
 
 const MobileLayout = () => {
