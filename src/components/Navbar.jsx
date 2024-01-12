@@ -1,17 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [date, setDate] = useState(new Date().toDateString());
   return (
-    <nav className="border-b border-[#333] p-4">
+    <nav className="shadow-sm border-[#333] bg-gray-900 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-xl font-bold">
-          Abstract - React
+          Surveillance OS
         </Link>
-        <div className="space-x-4">
-          <NavLink to="/about" title="About" />
-          <NavLink to="/privacy-policy" title="Policy" />
-          <NavLink to="/points" title="Points: 10" />
+        <div className="flex justify-center items-center space-x-5">
+          <i className="ri-wifi-fill" title="Connected to AVI-001"></i>
+          <i className="ri-battery-fill" title="Battery: 95 percent"></i>
+          <h1>{date.slice(0, date.lastIndexOf(" "))}</h1>
         </div>
       </div>
     </nav>

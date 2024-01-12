@@ -1,12 +1,12 @@
 import React from "react";
 
-const Gallery = () => {
+const Messaging = () => {
   const [time, setTime] = React.useState(new Date().toLocaleTimeString());
   return (
     <div className="flex rounded-md  flex-col justify-center items-center relative h-full bg-black ">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
-        {time.slice(0, time.lastIndexOf(" "))}
+        <h1 className="text-white"> {time.slice(0, time.lastIndexOf(" "))}</h1>
         <div className="bg-black p-[12px] rounded-[100%]"></div>
         <div class="flex gap-1" data-v-4a86e42e="">
           <svg
@@ -52,39 +52,39 @@ const Gallery = () => {
       </div>
       {/* Notch Code */}
 
-      {/*<--- Gallery code ---> */}
-      <div className=" overflow-scroll mt-12">
-        <h1 className="text-2xl text-white font-bold pl-2">Gallery</h1>
-        <div className="grid grid-cols-2 gap-2 p-2">
-          <div>
-            <img src="https://picsum.photos/200/300?random=1" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=2" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=3" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=4" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=5" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=6" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=7" />
-          </div>
-          <div>
-            <img src="https://picsum.photos/200/300?random=8" />
+      {/*<--- Message code ---> */}
+      <div className="overflow-scroll mt-12">
+        <h1 className="text-2xl text-white font-bold pl-2">Messaging</h1>
+        <div className="w-full">
+          <div className="flex flex-col gap-2 w-full ml-2 mr-2 text-start">
+            {/* <--- Chat Code --> */}
+            <div className="flex border border-white ">
+              <img
+                className="w-10 h-10 pr-2 rounded-[100%] mt-2 ]"
+                src="https://picsum.photos/200/300?random=1"
+              />
+              <h1 className="reak-normal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                ipsam sequi corporis accusantium vel nulla eius tempora et odio.
+              </h1>
+            </div>
+            <div className="flex border border-white">
+              <img
+                className="w-10 h-10 pr-2 rounded-[100%] "
+                src="https://picsum.photos/200/300?random=1"
+              />
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                ipsam sequi corporis accusantium vel nulla eius tempora et odio.
+              </h1>
+            </div>
+            {/* <--- Chat Code --> */}
           </div>
         </div>
       </div>
-      {/*<--- Gallery code ---> */}
+      {/*<--- Message code ---> */}
     </div>
   );
 };
 
-export default Gallery;
+export default Messaging;

@@ -10,6 +10,7 @@ const Homescreen = () => {
   const apps = {
     settings: "settings",
     gallery: "gallery",
+    messaging: "messaging",
   };
 
   const dispatch = useDispatch();
@@ -33,15 +34,14 @@ const Homescreen = () => {
     <div className="flex rounded-md flex-col justify-center items-center relative h-full bg-gradient-to-r from-blue-800 to-indigo-900">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
-        <h1 className="text-white">{time}</h1>
+        <h1 className="text-white">{time.slice(0, time.lastIndexOf(":"))}</h1>
         <div className="bg-black p-[12px] rounded-[100%]"></div>
-        <div class="flex gap-1" data-v-4a86e42e="">
+        <div class="flex gap-1">
           <svg
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            data-v-4a86e42e=""
           >
             <path
               fill="currentColor"
@@ -53,7 +53,6 @@ const Homescreen = () => {
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            data-v-4a86e42e=""
           >
             <path
               fill="currentColor"
@@ -65,7 +64,6 @@ const Homescreen = () => {
             viewBox="0 0 24 24"
             width="1.2em"
             height="1.2em"
-            data-v-4a86e42e=""
           >
             <path
               fill="currentColor"
@@ -80,7 +78,7 @@ const Homescreen = () => {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col">
           <h1 className="text-white  text-4xl font-bold text-center mt-10">
-            {time.slice(0, 7)}
+            {time.slice(0, time.lastIndexOf(" "))}
           </h1>
           <p className="text-center">{date}</p>
         </div>
@@ -105,7 +103,10 @@ const Homescreen = () => {
               ></path>
             </svg>
           </div>
-          <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+          <div
+            onClick={() => onAppClick(apps.messaging)}
+            className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+          >
             <svg
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"

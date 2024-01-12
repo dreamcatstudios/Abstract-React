@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { useParams, Link } from "react-router-dom";
 
 const QuestCard = () => {
-  const { difficulty } = useParams();
+  const { name } = useParams();
 
   const questData = {
-    easy: {
+    alex_file01: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/9/image.jpg",
-      title: "Privacy Threat Modeling - Easy",
+      title: "Alex - Report",
       description:
-        "Privacy threat modeling is the ultimate enabler of Privacy by Design...",
+        "Here's some data that we managed to collect on Alex. Identify the data and and help the AI algorith to determine the social credit score of Alex",
       learningPath: [
         { level: 1, title: "Start quest" },
         { level: 2, title: "Continue quest" },
@@ -18,7 +19,7 @@ const QuestCard = () => {
         { level: 5, title: "Challenge quest" },
       ],
     },
-    medium: {
+    mia_file02: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/8/image.jpg",
       title: "Privacy Threat Modeling - Medium",
       description:
@@ -31,7 +32,7 @@ const QuestCard = () => {
         { level: 5, title: "Challenge quest" },
       ],
     },
-    hard: {
+    adam_file03: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/2/image.jpg",
       title: "Privacy Threat Modeling - Hard",
       description:
@@ -59,7 +60,7 @@ const QuestCard = () => {
     },
   };
 
-  const selectedQuest = questData[difficulty.toLowerCase()];
+  const selectedQuest = questData[name.toLowerCase()];
 
   if (!selectedQuest) {
     // Handle invalid difficulty level
@@ -82,13 +83,13 @@ const QuestCard = () => {
         </div>
         <div className="border border-[#333] p-3 space-y-3">
           <div>
-            <h1>Learning Path</h1>
+            <h1>Alex Data</h1>
           </div>
           {selectedQuest.learningPath.map((item, index) => (
             <Link
               className="flex flex-col gap-3 w-full"
               key={item.level}
-              to={`/quest/${difficulty.toLowerCase()}/${item.level}`}
+              to={`/file/${name.toLowerCase()}/${item.level}`}
             >
               {/* Make this clickable so it goes to the next page */}
               <div

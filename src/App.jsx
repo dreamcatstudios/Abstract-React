@@ -9,6 +9,7 @@ import Points from "./pages/Points";
 import Mobile from "./mobile/MobileLayout";
 import { Provider } from "react-redux";
 import { mobileStore } from "./mobile/store/MobileStore";
+import Splash from "./pages/Splash";
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/splash" element={<Splash />} />
             <Route path="/points" element={<Points />} />
             <Route path="/mobile" element={<Mobile />} />
-            <Route path="/quest/:difficulty" element={<QuestCard />} />
+            <Route path="/file/:name" element={<QuestCard />} />
             <Route path="/quest/:difficulty/:number" element={<Question />} />
             {/* Add more routes for different pages if needed */}
           </Routes>
