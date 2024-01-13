@@ -273,7 +273,7 @@ const QuestCard = () => {
   };
 
   return (
-    <div className="container h-full flex flex-col justify-between p-3 bg-black">
+    <div className="container h-[100%] flex flex-col justify-between bg-black">
       <div className="border border-[#333] p-5 mt-5 mb-5">
         <div className="flex-col">
           <img
@@ -324,7 +324,7 @@ const QuestCard = () => {
       </div>
       <button
         onClick={finishData}
-        className="bg-[#fafafa] text-black p-3 mb-12"
+        className="bg-[#fafafa] text-black p-3 mb-32"
       >
         Finish
       </button>
