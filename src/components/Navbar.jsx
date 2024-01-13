@@ -10,8 +10,16 @@ const Navbar = () => {
           Surveillance OS
         </Link>
         <div className="flex justify-center items-center space-x-5">
-          <i className="ri-wifi-fill" title="Connected to AVI-001"></i>
-          <i className="ri-battery-fill" title="Battery: 95 percent"></i>
+          <i
+            style={{ fontSize: "1.15rem" }}
+            className="ri-wifi-fill"
+            title="Connected to AVI-001"
+          ></i>
+          <i
+            style={{ fontSize: "1.15rem" }}
+            className="ri-battery-fill"
+            title="Battery: 95 percent"
+          ></i>
           <h1>{date.slice(0, date.lastIndexOf(" "))}</h1>
         </div>
       </div>

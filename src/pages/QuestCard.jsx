@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import PieChart from "../components/PieChart";
 
 const QuestCard = () => {
-  const [userAnswer, setUserAnswer] = useState(""); // New state for user's answer
+  const [userAnswer, setUserAnswer] = useState("");
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [maxPoints, setMaxPoints] = useState(0);
+  const [showChart, setShowChart] = useState(false);
+  const { name } = useParams();
+
   const [questData, setQuestData] = useState({
     alex_file01: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/9/image.jpg",
@@ -220,8 +226,6 @@ const QuestCard = () => {
     },
   });
 
-  const { name } = useParams();
-
   const onClickExpand = (index) => {
     setQuestData((prevState) => ({
       ...prevState,
@@ -253,8 +257,6 @@ const QuestCard = () => {
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       const updatedPoints = currentQuest.points + 1;
 
-      console.log(updatedPoints); // Log the points before updating the state
-
       setQuestData((prevState) => ({
         ...prevState,
         [name.toLowerCase()]: {
@@ -265,69 +267,97 @@ const QuestCard = () => {
           ),
         },
       }));
+
+      // Update totalPoints state
+      setTotalPoints((prevTotalPoints) => prevTotalPoints + 1);
     }
   };
 
   const finishData = () => {
     console.log("questData", questData[name.toLowerCase()]);
+    console.log("Total Points:", totalPoints);
+
+    // Calculate maxPoints
+    const maxPoints = selectedQuest.learningPath.length;
+    setMaxPoints(maxPoints);
+    setShowChart(!showChart);
   };
 
-  return (
-    <div className="container h-[100%] flex flex-col justify-between bg-black">
-      <div className="border border-[#333] p-5 mt-5 mb-5">
-        <div className="flex-col">
-          <img
-            src={selectedQuest.img}
-            alt="profile-photo"
-            className="w-full h-32 object-cover mb-2 rounded-md"
-          />
-          <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
-        </div>
-        <div>
-          <p className="mb-2">{selectedQuest.description}</p>
-        </div>
+  const pieChartData = [
+    { value: totalPoints },
+    { value: maxPoints - totalPoints },
+  ];
 
-        <div className="border border-[#333] p-3 space-y-3">
-          <div>
-            <h1>{questData[name].downloadTag}</h1>
-            <button className="px-5 py-3 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out">
-              {questData[name].fileName}
-            </button>
+  return (
+    <div className="h-full bg-black">
+      <div className="container h-[100%] flex flex-col justify-between bg-black">
+        <div className="border border-[#999] p-5 mt-5 mb-5">
+          <div className="flex-col">
+            <img
+              src={selectedQuest.img}
+              alt="profile-photo"
+              className="w-full h-32 object-cover mb-2 rounded-md"
+            />
+            <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
           </div>
-          {selectedQuest.learningPath.map((item, index) => (
-            <div className="flex flex-col gap-3 w-full" key={item.level}>
-              <div
-                onClick={() => onClickExpand(index)}
-                className="bg-[#444] items-center p-5 mt-2 rounded-sm flex-col "
-              >
-                <p className="text-white">{`${item.level} - ${item.title}`}</p>
-                {item.clicked && (
-                  <div className="flex gap-3 items-center">
-                    <input
-                      onChange={(e) => setUserAnswer(e.target.value)}
-                      onClick={onInputClick}
-                      placeholder="Type your answer"
-                      className="h-5 pt-5 pb-5 pl-2 mt-2 transition-all duration-300 ease-in-out text-black rounded-sm"
-                    />
-                    <button
-                      onClick={() => onAnswerSubmit(index)}
-                      className="px-3 py-2 mt-2 bg-black rounded text-white"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                )}
-              </div>
+          <div>
+            <p className="mb-2">{selectedQuest.description}</p>
+          </div>
+
+          <div className="border border-[#999] p-3 space-y-3">
+            <div>
+              <h1>{questData[name].downloadTag}</h1>
+              <button className="px-5 py-3 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out">
+                {questData[name].fileName}
+              </button>
             </div>
-          ))}
+            {selectedQuest.learningPath.map((item, index) => (
+              <div className="flex flex-col gap-3 w-full" key={item.level}>
+                <div
+                  onClick={() => onClickExpand(index)}
+                  className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col "
+                >
+                  <p className="text-white">{`${item.level} - ${item.title}`}</p>
+                  {item.clicked && (
+                    <div className="flex gap-3 items-center">
+                      <input
+                        onChange={(e) => setUserAnswer(e.target.value)}
+                        onClick={onInputClick}
+                        placeholder="Type your answer"
+                        className="h-5 pt-5 pb-5 pl-2 mt-2 transition-all duration-300 ease-in-out text-black rounded-sm"
+                      />
+                      <button
+                        onClick={() => onAnswerSubmit(index)}
+                        className="px-3 py-2 mt-2 bg-black rounded text-white"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+        <button
+          onClick={finishData}
+          className="bg-[#fafafa] text-black p-3 mb-12 "
+        >
+          Finish
+        </button>
       </div>
-      <button
-        onClick={finishData}
-        className="bg-[#fafafa] text-black p-3 mb-32"
-      >
-        Finish
-      </button>
+      {/*<--- Chart Component ---> */}
+      {showChart && (
+        <div className="w-full flex flex-col items-center justify-center pt-3 pb-3">
+          <h1 className="text-5xl text-center mt-10 pb-5 font-bold">
+            Your Score
+          </h1>
+          <PieChart width={400} height={400} data={pieChartData} />
+          <h1 className="text-5xl text-center mt-10 font-bold">{`${totalPoints} / ${maxPoints}`}</h1>
+        </div>
+      )}
+
+      {/*<--- Chart Component ---> */}
     </div>
   );
 };
