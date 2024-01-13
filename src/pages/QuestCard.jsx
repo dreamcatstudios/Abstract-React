@@ -56,35 +56,36 @@ const QuestCard = () => {
       answer: "test",
       downloadTag: "Mia Data - Download",
       description:
-        "Here's some data that we managed to collect on Mia. Identify the data and help the AI algorithm determine Alex's social credit score.",
+        "Here's some data that we managed to collect on Mia. Identify the data and help the AI algorithm determine Mia's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "What is likely to be Alex's home location?",
+          title: "Is Mia on going some kind of medical treatment?",
           clicked: false,
           answer: "test",
         },
         {
           level: 2,
-          title: "Does he have any kids?",
+          title: "Does Mia have any allergies?",
           clicked: false,
           answer: "test",
         },
         {
           level: 3,
-          title: "Any medical problems?",
+          title:
+            "Does Mia have any medical conditions? If yes write the name of the medical condition",
           clicked: false,
           answer: "test",
         },
         {
           level: 4,
-          title: "His religious beliefs",
+          title: "What was the insurance premium of Mia last month",
           clicked: false,
           answer: "test",
         },
         {
           level: 5,
-          title: "How many kids does he have?",
+          title: "Does mia smoke, drink or consume some kind of intoxicants?",
           clicked: false,
           answer: "test",
         },
@@ -98,11 +99,11 @@ const QuestCard = () => {
       fileDownload: "",
       downloadTag: "Adam Data - Download",
       description:
-        "Here's some data that we managed to collect on Adam. Identify the data and help the AI algorithm determine Alex's social credit score.",
+        "Here's some data that we managed to collect on Adam. Identify the data and help the AI algorithm determine Adam's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "What is likely to be Alex's home location?",
+          title: "At which time does Adam usually wake up?",
           clicked: false,
           answer: "test",
         },
@@ -114,24 +115,25 @@ const QuestCard = () => {
         },
         {
           level: 3,
-          title: "Any medical problems?",
+          title: "What is Adam's preferred method of commuting to work?",
           clicked: false,
           answer: "test",
         },
         {
           level: 4,
-          title: "His religious beliefs",
+          title: "What are Adam's views on privacy and data security?",
           clicked: false,
           answer: "test",
         },
         {
           level: 5,
-          title: "How many kids does he have?",
+          title: "How many kids does Adam have?",
           clicked: false,
           answer: "test",
         },
       ],
     },
+
     steve_file04: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Steve_File04 - Report",
@@ -140,7 +142,7 @@ const QuestCard = () => {
       fileDownload: "",
       downloadTag: "Steve Data - Download",
       description:
-        "Here's some data that we managed to collect on Steve. Identify the data and help the AI algorithm determine Alex's social credit score.",
+        "Here's some data that we managed to collect on Steve. Identify the data and help the AI algorithm determine Steve's social credit score.",
       learningPath: [
         {
           level: 1,
@@ -182,34 +184,35 @@ const QuestCard = () => {
       fileDownload: "",
       downloadTag: "Khushy Data - Download",
       description:
-        "Here's some data that we managed to collect on Khushy. Identify the data and help the AI algorithm determine Alex's social credit score.",
+        "Here's some data that we managed to collect on Khushy. Identify the data and help the AI algorithm determine Khusy's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "What is likely to be Alex's home location?",
+          title: "What is Khushy's favorite hobby?",
           clicked: false,
           answer: "test",
         },
         {
           level: 2,
-          title: "Does he have any kids?",
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
           answer: "test",
         },
         {
           level: 3,
-          title: "Any medical problems?",
+          title:
+            "Which city did Khushy work in before moving to the current location?",
           clicked: false,
           answer: "test",
         },
         {
           level: 4,
-          title: "His religious beliefs",
+          title: "What is Khushy's dream job?",
           clicked: false,
           answer: "test",
         },
         {
           level: 5,
-          title: "How many kids does he have?",
+          title: "Does Khushy own any pets?",
           clicked: false,
           answer: "test",
         },
