@@ -281,6 +281,13 @@ const QuestCard = () => {
     const maxPoints = selectedQuest.learningPath.length;
     setMaxPoints(maxPoints);
     setShowChart(!showChart);
+    // Delay for 0.5 seconds before scrolling to the bottom of the page
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
+    }, 250);
   };
 
   const pieChartData = [
@@ -289,9 +296,9 @@ const QuestCard = () => {
   ];
 
   return (
-    <div className="h-full bg-black">
-      <div className="container h-[100%] flex flex-col justify-between bg-black">
-        <div className="border border-[#999] p-5 mt-5 mb-5">
+    <div className="h-full container bg-black  flex flex-col justify-center items-center">
+      <div className="w-full h-[100%] flex flex-col justify-between bg-black">
+        <div className="border border-[#fafafa] p-5 mt-5 mb-5">
           <div className="flex-col">
             <img
               src={selectedQuest.img}
@@ -304,7 +311,7 @@ const QuestCard = () => {
             <p className="mb-2">{selectedQuest.description}</p>
           </div>
 
-          <div className="border border-[#999] p-3 space-y-3">
+          <div className="border border-[#fafafa] p-3 space-y-3">
             <div>
               <h1>{questData[name].downloadTag}</h1>
               <button className="px-5 py-3 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out">
@@ -348,12 +355,10 @@ const QuestCard = () => {
       </div>
       {/*<--- Chart Component ---> */}
       {showChart && (
-        <div className="w-full flex flex-col items-center justify-center pt-3 pb-3">
-          <h1 className="text-5xl text-center mt-10 pb-5 font-bold">
-            Your Score
-          </h1>
+        <div className="w-full flex flex-col items-center justify-center pt-10 pb-10 mb-10  border border-[#fafafa]">
+          <h1 className="text-5xl text-center  pb-5 font-bold">Your Score</h1>
           <PieChart width={400} height={400} data={pieChartData} />
-          <h1 className="text-5xl text-center mt-10 font-bold">{`${totalPoints} / ${maxPoints}`}</h1>
+          <h1 className="text-5xl text-center mt-10 font-bold">{`Total Points: ${totalPoints} / ${maxPoints}`}</h1>
         </div>
       )}
 

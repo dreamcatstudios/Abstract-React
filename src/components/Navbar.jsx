@@ -11,12 +11,12 @@ const Navbar = () => {
         </Link>
         <div className="flex justify-center items-center space-x-5">
           <i
-            style={{ fontSize: "1.15rem" }}
+            style={{ fontSize: "1.25rem" }}
             className="ri-wifi-fill"
             title="Connected to AVI-001"
           ></i>
           <i
-            style={{ fontSize: "1.15rem" }}
+            style={{ fontSize: "1.25rem" }}
             className="ri-battery-fill"
             title="Battery: 95 percent"
           ></i>

@@ -37,7 +37,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-blue-500 container">
+    <div className="flex flex-col min-h-screen bg-[#0070f3] container">
       <div className="flex flex-col gap-12 p-6 w-0">
         {levels.map((item, index) => (
           <Link
