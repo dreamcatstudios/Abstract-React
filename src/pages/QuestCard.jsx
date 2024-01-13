@@ -298,7 +298,7 @@ const QuestCard = () => {
             <div className="flex flex-col gap-3 w-full" key={item.level}>
               <div
                 onClick={() => onClickExpand(index)}
-                className="bg-[#444] items-center p-2 rounded-sm flex-col "
+                className="bg-[#444] items-center p-5 mt-2 rounded-sm flex-col "
               >
                 <p className="text-white">{`${item.level} - ${item.title}`}</p>
                 {item.clicked && (
