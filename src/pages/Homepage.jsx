@@ -46,7 +46,7 @@ const Homepage = () => {
             className=""
           >
             <div
-              className="btn-img bg-cover bg-no-repeat w-20 h-20"
+              className="btn-img bg-cover bg-no-repeat w-20 h-20 hover:brightness-75"
               style={{ backgroundImage: `url(${item.bg})` }}
             >
               <h1 className="text-center whitespace-nowrap pt-[82px]">

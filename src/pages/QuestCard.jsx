@@ -322,16 +322,16 @@ const QuestCard = () => {
               <div className="flex flex-col gap-3 w-full" key={item.level}>
                 <div
                   onClick={() => onClickExpand(index)}
-                  className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col "
+                  className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col"
                 >
                   <p className="text-white">{`${item.level} - ${item.title}`}</p>
                   {item.clicked && (
-                    <div className="flex gap-3 items-center">
+                    <div className="flex gap-3 items-center flex-col sm:flex-row ">
                       <input
                         onChange={(e) => setUserAnswer(e.target.value)}
                         onClick={onInputClick}
                         placeholder="Type your answer"
-                        className="h-5 pt-5 pb-5 pl-2 mt-2 transition-all duration-300 ease-in-out text-black rounded-sm"
+                        className="h-5 pt-5 pb-5 pl-2 mt-2 hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
                       />
                       <button
                         onClick={() => onAnswerSubmit(index)}
@@ -348,7 +348,7 @@ const QuestCard = () => {
         </div>
         <button
           onClick={finishData}
-          className="bg-[#fafafa] text-black p-3 mb-12 "
+          className="bg-[#fafafa] text-black p-3 mb-12 hover:text-white hover:bg-black hover:transition-all hover:delay-75 hover:ease-in-out hover:border-white hover:border"
         >
           Finish
         </button>

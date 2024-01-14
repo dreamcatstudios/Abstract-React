@@ -22,7 +22,7 @@ const Navbar = () => {
           ></i>
           <h1>{date.slice(0, date.lastIndexOf(" "))}</h1>
         </div>
-      </div>
+      </div>  
     </nav>
   );
 };
