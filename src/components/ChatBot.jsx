@@ -54,9 +54,12 @@ const ChatBot = ({ toggleChatBot }) => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-scroll h-[70vh] p-5">
       {messages.map((message, index) => (
-        <div key={index} className="flex items-center border p-3 m-2">
+        <div
+          key={index}
+          className="flex w-full flex-col sm:flex-row items-center border p-3 m-2"
+        >
           <img
             src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
             alt="Profile"
@@ -68,13 +71,13 @@ const ChatBot = ({ toggleChatBot }) => {
       {showDots && <div>...</div>}
       {showOkButton && !chatDisabled && (
         <button
-          className="border w-12 h-12 rounded-full border-black "
+          className="border px-5 py-3 rounded-full border-black "
           onClick={() => {
             toggleChatBot();
             setChatDisabled(true);
           }}
         >
-          Ok
+          Ok, got it
         </button>
       )}
     </div>

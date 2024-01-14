@@ -38,7 +38,7 @@ const App = () => {
         </div>
         {showChatbot && (
           <div
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full sm:w-[500px] md:w-[600px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px]"
             style={{
               backgroundColor: "white",
               padding: "20px",
