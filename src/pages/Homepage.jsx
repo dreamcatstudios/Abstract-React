@@ -34,11 +34,41 @@ const Homepage = () => {
       description:
         "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
     },
+    {
+      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      title: "Dave_File06",
+      description:
+        "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
+    },
+    {
+      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      title: "Tom_File07",
+      description:
+        "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
+    },
+    {
+      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      title: "Ryan_File08",
+      description:
+        "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
+    },
+    {
+      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      title: "Jim_File09",
+      description:
+        "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
+    },
+    {
+      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      title: "Adam_File10",
+      description:
+        "This is an extremely hard level. It's for expert players seeking the ultimate challenge.",
+    },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0070f3] container">
-      <div className="flex flex-col gap-12 p-6 w-0">
+    <div className="flex flex-col h-screen bg-[#0070f3] container">
+      <div className="flex flex-col h-[95%] gap-12 p-6 w-0 flex-wrap">
         {levels.map((item, index) => (
           <Link
             key={index}

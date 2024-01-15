@@ -2,14 +2,25 @@ import React, { useState, useEffect } from "react";
 
 const ChatBot = ({ toggleChatBot }) => {
   const initialMessages = [
-    { text: "Welcome, Officer! It's your first day here.", delay: 1000 },
     {
-      text: "We are working on an Artificial Intelligence system that automatically creates profiles of civilians and generates their social credit scores.",
-      delay: 3500,
+      text: "Welcome, Officer. Today marks the beginning of your involvement in a discreet governmental initiative.",
+      delay: 1000,
     },
     {
-      text: "Your role is to assess data on individuals, helping our AI learn from your expertise.",
-      delay: 4500,
+      text: "We're running an AI project that compiles data on individuals, assigning social credit scores under the radar. Your task is to contribute your expertise to this endeavor.",
+      delay: 5000,
+    },
+    {
+      text: "Your role involves assessing data on individuals without explicit consent. It's essential to keep this operation discreet to avoid unnecessary attention.",
+      delay: 5000,
+    },
+    {
+      text: "We emphasize the importance of your analytical skills and ability to navigate this project subtly. This is a delicate operation, and precision is key.",
+      delay: 5000,
+    },
+    {
+      text: "Remember, Officer, your actions influence the success of this initiative. Keep a low profile and ensure the seamless execution of your duties.",
+      delay: 5000,
     },
   ];
 
