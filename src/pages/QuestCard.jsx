@@ -224,6 +224,216 @@ const QuestCard = () => {
         },
       ],
     },
+    dave_file06: {
+      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      title: "Dave_File05 - Report",
+      fileName: "Job_application.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Dave Data - Download",
+      description:
+        "Here's some data that we managed to collect on Dave. Identify the data and help the AI algorithm determine Dave's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title: "What is Khushy's favorite hobby?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 2,
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
+          answer: "test",
+        },
+        {
+          level: 3,
+          title:
+            "Which city did Khushy work in before moving to the current location?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 4,
+          title: "What is Khushy's dream job?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 5,
+          title: "Does Khushy own any pets?",
+          clicked: false,
+          answer: "test",
+        },
+      ],
+    },
+    tom_file07: {
+      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      title: "Tom_File07 - Report",
+      fileName: "Job_application.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Tom Data - Download",
+      description:
+        "Here's some data that we managed to collect on Tom. Identify the data and help the AI algorithm determine Tom's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title: "What is Khushy's favorite hobby?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 2,
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
+          answer: "test",
+        },
+        {
+          level: 3,
+          title:
+            "Which city did Khushy work in before moving to the current location?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 4,
+          title: "What is Khushy's dream job?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 5,
+          title: "Does Khushy own any pets?",
+          clicked: false,
+          answer: "test",
+        },
+      ],
+    },
+    surbhi_file08: {
+      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      title: "Surbhi_File08 - Report",
+      fileName: "Job_application.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Surbhi Data - Download",
+      description:
+        "Here's some data that we managed to collect on Surbhi. Identify the data and help the AI algorithm determine Ryan's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title: "What is Khushy's favorite hobby?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 2,
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
+          answer: "test",
+        },
+        {
+          level: 3,
+          title:
+            "Which city did Khushy work in before moving to the current location?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 4,
+          title: "What is Khushy's dream job?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 5,
+          title: "Does Khushy own any pets?",
+          clicked: false,
+          answer: "test",
+        },
+      ],
+    },
+    jim_file09: {
+      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      title: "Jim_File09 - Report",
+      fileName: "Job_application.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Jim Data - Download",
+      description:
+        "Here's some data that we managed to collect on Jim. Identify the data and help the AI algorithm determine Jim's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title: "What is Khushy's favorite hobby?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 2,
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
+          answer: "test",
+        },
+        {
+          level: 3,
+          title:
+            "Which city did Khushy work in before moving to the current location?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 4,
+          title: "What is Khushy's dream job?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 5,
+          title: "Does Khushy own any pets?",
+          clicked: false,
+          answer: "test",
+        },
+      ],
+    },
+    adam_file10: {
+      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      title: "Adam_File05 - Report",
+      fileName: "Job_application.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Adam Data - Download",
+      description:
+        "Here's some data that we managed to collect on Adam. Identify the data and help the AI algorithm determine Adam's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title: "What is Khushy's favorite hobby?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 2,
+          title: "Is Khushy a vegetarian or a non-vegetarian?",
+          answer: "test",
+        },
+        {
+          level: 3,
+          title:
+            "Which city did Khushy work in before moving to the current location?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 4,
+          title: "What is Khushy's dream job?",
+          clicked: false,
+          answer: "test",
+        },
+        {
+          level: 5,
+          title: "Does Khushy own any pets?",
+          clicked: false,
+          answer: "test",
+        },
+      ],
+    },
   });
 
   const onClickExpand = (index) => {
@@ -348,7 +558,7 @@ const QuestCard = () => {
         </div>
         <button
           onClick={finishData}
-          className="bg-[#fafafa] text-black p-3 mb-12 hover:text-white hover:bg-black hover:transition-all hover:delay-75 hover:ease-in-out hover:border-white hover:border"
+          className="bg-[#fafafa] text-black p-3 mb-16 sm:mb-12  hover:text-white hover:bg-black hover:transition-all hover:delay-75 hover:ease-in-out hover:border-white hover:border"
         >
           Finish
         </button>

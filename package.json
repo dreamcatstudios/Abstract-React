@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@reduxjs/toolkit": "^2.0.1",
     "@visx/event": "^3.3.0",
     "@visx/group": "^3.3.0",
@@ -21,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.20.1",
+    "react-spinners": "^0.13.8",
     "victory": "^36.7.0",
     "victory-tooltip": "^36.7.0"
   },

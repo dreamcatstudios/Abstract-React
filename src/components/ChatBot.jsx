@@ -65,24 +65,26 @@ const ChatBot = ({ toggleChatBot }) => {
   }, []);
 
   return (
-    <div className="overflow-scroll h-[70vh] p-5">
+    <div className="overflow-scroll h-[70vh] p-3 sm:p-5">
+      <h1 className="text-4xl text-center pb-3  font-bold ">Messages</h1>
       {messages.map((message, index) => (
         <div
           key={index}
-          className="flex w-full flex-col sm:flex-row items-center border p-3 m-2"
+          className="flex rounded-[40px] w-full flex-col sm:flex-row items-center border p-3 m-2 border-gray-500"
         >
           <img
-            src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
-            alt="Profile"
-            className="w-[30px] h-[30px] rounded-full mr-3"
+            src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Snickers"
+            alt="avatar"
+            className="w-[50px] h-[50px] rounded-full mr-3"
           />
+
           <div>{message}</div>
         </div>
       ))}
       {showDots && <div>...</div>}
       {showOkButton && !chatDisabled && (
         <button
-          className="border px-5 py-3 rounded-full border-black "
+          className="border px-5 py-3 rounded-full border-black w-full sm:w-auto mt-5 sm:mt-0 "
           onClick={() => {
             toggleChatBot();
             setChatDisabled(true);

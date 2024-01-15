@@ -12,12 +12,26 @@ import Points from "./pages/Points";
 import Mobile from "./mobile/MobileLayout";
 import { mobileStore } from "./mobile/store/MobileStore";
 import Splash from "./pages/Splash";
-import ChatBot from "./components/ChatBot"; // Updated import
+import ChatBot from "./components/ChatBot";
 
 const App = () => {
-  const [showChatbot, setShowChatbot] = useState(true);
+  const [showChatbot, setShowChatbot] = useState(false);
+
+  useEffect(() => {
+    const hasSeenChatbot = localStorage.getItem("hasSeenChatbot");
+
+    if (!hasSeenChatbot) {
+      const timer = setTimeout(() => {
+        setShowChatbot(true);
+      }, 8000); // Adjust the delay time as needed
+      return () => clearTimeout(timer);
+    }
+
+    return () => {}; // No need to clear the timer if chatbot has been seen
+  }, []);
 
   const toggleChatBot = () => {
+    localStorage.setItem("hasSeenChatbot", "true");
     setShowChatbot((prev) => !prev);
   };
 
@@ -40,13 +54,14 @@ const App = () => {
           <div
             className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full sm:w-[500px] md:w-[600px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px]"
             style={{
-              backgroundColor: "white",
-              padding: "20px",
+              backgroundColor: "#fafafa",
+              padding: "10px",
               borderRadius: "8px",
               boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               zIndex: "1000",
             }}
           >
+
             <ChatBot toggleChatBot={toggleChatBot} />
           </div>
         )}
