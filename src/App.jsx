@@ -61,7 +61,6 @@ const App = () => {
               zIndex: "1000",
             }}
           >
-
             <ChatBot toggleChatBot={toggleChatBot} />
           </div>
         )}

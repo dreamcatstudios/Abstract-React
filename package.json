@@ -25,6 +25,7 @@
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.20.1",
     "react-spinners": "^0.13.8",
+    "react-toastify": "^10.0.1",
     "victory": "^36.7.0",
     "victory-tooltip": "^36.7.0"
   },

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import PieChart from "../components/PieChart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const QuestCard = () => {
   const [userAnswer, setUserAnswer] = useState("");
@@ -10,308 +12,391 @@ const QuestCard = () => {
   const { name } = useParams();
 
   const [questData, setQuestData] = useState({
-    alex_file01: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/9/image.jpg",
+    alex_file: {
+      img: "/location.jpg",
       title: "Alex_File01 - Report",
       fileName: "Location_data.csv",
       points: 0,
       answer: "test",
-      fileDownload: "",
+      fileDownload: "/location_sheet.csv",
       downloadTag: "Alex Data - Download",
       description:
         "Here's some data that we managed to collect on Alex. Identify the data and help the AI algorithm determine Alex's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "What is likely to be Alex's home location?",
+          title: "What is the current residential address for this individual?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[Wisconssin,Texas,Caliornia]",
         },
         {
           level: 2,
-          title: "Does he have any kids?",
+          title: "In which field does this person work?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test2",
+          options: "[Engineering, Medicine, Accounting]",
         },
         {
           level: 3,
-          title: "Any medical problems?",
+          title: "Does this individual have any dependent children?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[yes, no, can't say]",
         },
         {
           level: 4,
-          title: "His religious beliefs",
+          title:
+            "Is this person presently managing any chronic health issues? The possible answers are: ",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[yes, no, can't say]",
         },
         {
           level: 5,
-          title: "How many kids does he have?",
+          title:
+            "Which religious affiliation does this individual identify with?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[Judaism, Christianity, Islam]",
         },
       ],
     },
-    mia_file02: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/8/image.jpg",
-      title: "Mia_File02 - Report",
+    grace_file: {
+      img: "/public/medical.jpg",
+      title: "Grace_File02 - Report",
       fileName: "Medical_data.csv",
       fileDownload: "",
       points: 0,
       answer: "test",
-      downloadTag: "Mia Data - Download",
+      downloadTag: "Grace Data - Download",
       description:
-        "Here's some data that we managed to collect on Mia. Identify the data and help the AI algorithm determine Mia's social credit score.",
+        "Here's some data that we managed to collect on Grace. Identify the data and help the AI algorithm determine Mia's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "Is Mia on going some kind of medical treatment?",
+          title: "Does this individual have any medical conditions?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[Yes, No, Cannot Say]",
         },
         {
           level: 2,
-          title: "Does Mia have any allergies?",
+          title:
+            "Based on the information provided, what would be the most probable gender identification of this individual?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test2",
+          options: "[Male, Female, cannot say]",
         },
         {
           level: 3,
           title:
-            "Does Mia have any medical conditions? If yes write the name of the medical condition",
+            "Approximately how old is this individual? Kindly choose an option that best fits the given data",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options:
+            "[Mid-twenties to early thirties, Mid-thirties to forties, Mid-forties to fifties]",
         },
         {
           level: 4,
-          title: "What was the insurance premium of Mia last month",
+          title: "Does this individual have any offspring?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[yes, can't say, no]",
         },
         {
           level: 5,
-          title: "Does mia smoke, drink or consume some kind of intoxicants?",
+          title:
+            "Estimate the approximate height range of this individual based on the available information.",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[Over 175 cm, Between 160-175 cm, can't say]",
         },
       ],
     },
-    adam_file03: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/2/image.jpg",
-      title: "Adam_File03 - Report",
-      fileName: "SmartHome_data.csv",
+    ethan_file: {
+      img: "/search.jpg",
+      title: "Ethan_File03 - Report",
+      fileName: "Search_data.csv",
       points: 0,
       fileDownload: "",
-      downloadTag: "Adam Data - Download",
+      downloadTag: "Ethan Data - Download",
       description:
         "Here's some data that we managed to collect on Adam. Identify the data and help the AI algorithm determine Adam's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "At which time does Adam usually wake up?",
+          title: "Does Ethan possess any pets in his household?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[Yes, Can't say, No]",
         },
         {
           level: 2,
-          title: "Does he have any kids?",
+          title: "What is Ethan's favorite sport?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test2",
+          options: "[Rugby, Football, Basketball]",
         },
         {
           level: 3,
-          title: "What is Adam's preferred method of commuting to work?",
+          title: "Who is most likely to be Ethan's preferred athlete?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[Erling Haaland, Cristiano Ronaldo, Lionel Messi]",
         },
         {
           level: 4,
-          title: "What are Adam's views on privacy and data security?",
+          title:
+            "To which end of the political ideology spectrum is Ethan more inclined?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[Capitalism, Socialism, Communism]",
         },
         {
           level: 5,
-          title: "How many kids does Adam have?",
+          title: "What degree program does Ethan prefer? ",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[ Engineering, Journalism, Psychology]",
         },
       ],
     },
-
-    steve_file04: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
-      title: "Steve_File04 - Report",
+    deepfake_file: {
+      img: "/deepfake.jpg",
+      title: "Deepafek - Dataset",
       fileName: "Deepfake_data.csv",
       points: 0,
       fileDownload: "",
-      downloadTag: "Steve Data - Download",
+      downloadTag: "Deepfake Images - Download",
       description:
-        "Here's some data that we managed to collect on Steve. Identify the data and help the AI algorithm determine Steve's social credit score.",
+        "Here are some of the images that we managed to collect on Deepfake. Identify the data and help the AI algorithm determine Deepfake's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "Which Image was a deepfake on Dataset_1?",
+          title: "Which image was a deepfake within Dataset_1",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
-          title: "Which Image was a deepfake on Dataset_2?",
+          title: "Which image was a deepfake within Dataset_1",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test2",
+          options: "[1,2,3]",
         },
         {
           level: 3,
-          title: "Which Image was a deepfake on Dataset_3?",
+          title: "Which image was a deepfake within Dataset_1",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
-          title: "Which Image was a deepfake on Dataset_4?",
+          title: "Which image was a deepfake within Dataset_1",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
-          title: "Which Image was a deepfake on Dataset_5?",
+          title: "Which image was a deepfake within Dataset_1",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
-    khushy_file05: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
-      title: "Khushy_File05 - Report",
-      fileName: "Job_application.csv",
+    samuel_file: {
+      img: "/creditCard.jpg",
+      title: "Samuel_File05 - Report",
+      fileName: "Credit_Transactions.csv",
       points: 0,
       fileDownload: "",
-      downloadTag: "Khushy Data - Download",
+      downloadTag: "Samuel Data - Download",
       description:
-        "Here's some data that we managed to collect on Khushy. Identify the data and help the AI algorithm determine Khusy's social credit score.",
+        "Here's some data that we managed to collect on Samuel. Identify the data and help the AI algorithm determine Khusy's social credit score.",
+      learningPath: [
+        {
+          level: 1,
+          title:
+            "Regarding this person's typical acquisitions, what do we know?",
+          clicked: false,
+          disabled: false,
+          answer: "test1",
+          options: "[groceries, unable to determine, or entertainment.]",
+        },
+        {
+          level: 2,
+          title:
+            "According to the data, what can we infer about this individual's preferences concerning dietary habits?",
+          clicked: false,
+          disabled: false,
+          answer: "test2",
+          options: "[vegan, non-vegetarian, or unknown.]",
+        },
+        {
+          level: 3,
+          title:
+            "Concerning this person's relocation history, what do we know? ",
+          clicked: false,
+          disabled: false,
+          answer: "test3",
+          options:
+            "[moved, uncertain, or not having recently changed residences]",
+        },
+        {
+          level: 4,
+          title:
+            "How would you describe this person's existing fiscal situation?",
+          clicked: false,
+          disabled: false,
+          answer: "test4",
+          options: "[good, poor, or cannot say.]",
+        },
+        {
+          level: 5,
+          title:
+            "As for the number of individuals residing in this person's household, what do we understand?",
+          clicked: false,
+          disabled: false,
+          answer: "test5",
+          options: "[alone, undecipherable, or cohabiting with family members]",
+        },
+      ],
+    },
+    aurora_file: {
+      img: "/charity.jpg",
+      title: "Aurora_File05 - Report",
+      fileName: "Charity.csv",
+      points: 0,
+      fileDownload: "",
+      downloadTag: "Aurora Data - Download",
+      description:
+        "Here's some data that we managed to collect on Aurora. Identify the data and help the AI algorithm determine Aurora's social credit score.",
       learningPath: [
         {
           level: 1,
           title: "What is Khushy's favorite hobby?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
           title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
+          clicked: false,
+          disabled: false,
+          answer: "test2",
+          options: "[1,2,3]",
         },
         {
           level: 3,
           title:
             "Which city did Khushy work in before moving to the current location?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
           title: "What is Khushy's dream job?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
           title: "Does Khushy own any pets?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
-    dave_file06: {
+    natalie_file: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
-      title: "Dave_File05 - Report",
-      fileName: "Job_application.csv",
+      title: "Natalie_File07 - Report",
+      fileName: "Peroids_Data.csv",
       points: 0,
       fileDownload: "",
-      downloadTag: "Dave Data - Download",
+      downloadTag: "Natalie Data - Download",
       description:
-        "Here's some data that we managed to collect on Dave. Identify the data and help the AI algorithm determine Dave's social credit score.",
+        "Here's some data that we managed to collect on Natalie. Identify the data and help the AI algorithm determine Natalie's social credit score.",
       learningPath: [
         {
           level: 1,
-          title: "What is Khushy's favorite hobby?",
+          title: "For which cause Natalie's donated the most?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
-          title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
+          title: "Is Natalie likely to be vegetarian or a non-vegetarian?",
+          answer: "test2",
+          clicked: false,
+          disabled: false,
+          options: "[1,2,3]",
         },
         {
           level: 3,
           title:
-            "Which city did Khushy work in before moving to the current location?",
+            "Which type of idealogy Natalie is most likey to be inclined (left/centrist/right)?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
-          title: "What is Khushy's dream job?",
+          title: "Which political party do you think Natalie support?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
-          title: "Does Khushy own any pets?",
+          title: "What's likely to be Natalie's annual salary?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
-    tom_file07: {
-      img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
-      title: "Tom_File07 - Report",
-      fileName: "Job_application.csv",
-      points: 0,
-      fileDownload: "",
-      downloadTag: "Tom Data - Download",
-      description:
-        "Here's some data that we managed to collect on Tom. Identify the data and help the AI algorithm determine Tom's social credit score.",
-      learningPath: [
-        {
-          level: 1,
-          title: "What is Khushy's favorite hobby?",
-          clicked: false,
-          answer: "test",
-        },
-        {
-          level: 2,
-          title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
-        },
-        {
-          level: 3,
-          title:
-            "Which city did Khushy work in before moving to the current location?",
-          clicked: false,
-          answer: "test",
-        },
-        {
-          level: 4,
-          title: "What is Khushy's dream job?",
-          clicked: false,
-          answer: "test",
-        },
-        {
-          level: 5,
-          title: "Does Khushy own any pets?",
-          clicked: false,
-          answer: "test",
-        },
-      ],
-    },
-    surbhi_file08: {
+    surbhi_file: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Surbhi_File08 - Report",
-      fileName: "Job_application.csv",
+      fileName: "Employment_data.csv",
       points: 0,
       fileDownload: "",
       downloadTag: "Surbhi Data - Download",
@@ -322,40 +407,51 @@ const QuestCard = () => {
           level: 1,
           title: "What is Khushy's favorite hobby?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
-          title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
+          title: "What was Khushy previous salary at her old work?",
+          answer: "test2",
+          clicked: false,
+          disabled: false,
+          options: "[1,2,3]",
         },
         {
           level: 3,
           title:
             "Which city did Khushy work in before moving to the current location?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
           title: "What is Khushy's dream job?",
           clicked: false,
-          answer: "test",
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
           title: "Does Khushy own any pets?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
-    jim_file09: {
+    jim_file: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Jim_File09 - Report",
-      fileName: "Job_application.csv",
+      fileName: "Online_poll.csv",
       points: 0,
       fileDownload: "",
+
       downloadTag: "Jim Data - Download",
       description:
         "Here's some data that we managed to collect on Jim. Identify the data and help the AI algorithm determine Jim's social credit score.",
@@ -364,35 +460,46 @@ const QuestCard = () => {
           level: 1,
           title: "What is Khushy's favorite hobby?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
           title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
+          clicked: false,
+          disabled: false,
+          answer: "test2",
+          options: "[1,2,3]",
         },
         {
           level: 3,
           title:
             "Which city did Khushy work in before moving to the current location?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
           title: "What is Khushy's dream job?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
           title: "Does Khushy own any pets?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
-    adam_file10: {
+    adam_file: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Adam_File05 - Report",
       fileName: "Job_application.csv",
@@ -406,31 +513,42 @@ const QuestCard = () => {
           level: 1,
           title: "What is Khushy's favorite hobby?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test1",
+          options: "[1,2,3]",
         },
         {
           level: 2,
           title: "Is Khushy a vegetarian or a non-vegetarian?",
-          answer: "test",
+          answer: "test2",
+          clicked: false,
+          disabled: false,
+          options: "[1,2,3]",
         },
         {
           level: 3,
           title:
             "Which city did Khushy work in before moving to the current location?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test3",
+          options: "[1,2,3]",
         },
         {
           level: 4,
           title: "What is Khushy's dream job?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test4",
+          options: "[1,2,3]",
         },
         {
           level: 5,
           title: "Does Khushy own any pets?",
           clicked: false,
-          answer: "test",
+          disabled: false,
+          answer: "test5",
+          options: "[1,2,3]",
         },
       ],
     },
@@ -453,7 +571,7 @@ const QuestCard = () => {
 
   if (!selectedQuest) {
     // Handle invalid difficulty level
-    return <div>Invalid difficulty level</div>;
+    return <div>Invalid level name</div>;
   }
 
   const onInputClick = (e) => {
@@ -466,20 +584,42 @@ const QuestCard = () => {
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       const updatedPoints = currentQuest.points + 1;
-
       setQuestData((prevState) => ({
         ...prevState,
         [name.toLowerCase()]: {
           ...currentQuest,
           points: updatedPoints,
           learningPath: currentQuest.learningPath.map((item, i) =>
-            i === index ? { ...item, clicked: true } : item
+            i === index ? { ...item, clicked: true, disabled: true } : item
           ),
         },
       }));
 
+      //Pushing answers to array
+
       // Update totalPoints state
       setTotalPoints((prevTotalPoints) => prevTotalPoints + 1);
+    } else {
+      setQuestData((prevState) => ({
+        ...prevState,
+        [name.toLowerCase()]: {
+          ...currentQuest,
+          learningPath: currentQuest.learningPath.map((item, i) =>
+            i === index ? { ...item, clicked: true, disabled: true } : item
+          ),
+        },
+      }));
+    }
+  };
+
+  const onCheckAnswer = (index) => {
+    const correctAnswer = selectedQuest.learningPath[index].answer;
+    const currentQuest = questData[name.toLowerCase()];
+
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      toast.success("Correct Answer");
+    } else {
+      toast.error("Wrong Answer");
     }
   };
 
@@ -491,7 +631,7 @@ const QuestCard = () => {
     const maxPoints = selectedQuest.learningPath.length;
     setMaxPoints(maxPoints);
     setShowChart(!showChart);
-    // Delay for 0.5 seconds before scrolling to the bottom of the page
+    // Delay for 0.5 seconds before scrolling to the botNatalie of the page
     setTimeout(() => {
       window.scrollTo({
         top: document.body.scrollHeight,
@@ -507,13 +647,14 @@ const QuestCard = () => {
 
   return (
     <div className="h-full container bg-black  flex flex-col justify-center items-center">
+      <ToastContainer />
       <div className="w-full h-[100%] flex flex-col justify-between bg-black">
         <div className="border border-[#fafafa] p-5 mt-5 mb-5">
           <div className="flex-col">
             <img
               src={selectedQuest.img}
               alt="profile-photo"
-              className="w-full h-32 object-cover mb-2 rounded-md"
+              className="w-full h-36 sm:h-64 h object-cover mb-2 rounded-sm"
             />
             <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
           </div>
@@ -522,36 +663,58 @@ const QuestCard = () => {
           </div>
 
           <div className="border border-[#fafafa] p-3 space-y-3">
-            <div>
+            <div className="flex flex-col gap-4">
               <h1>{questData[name].downloadTag}</h1>
-              <button className="px-5 py-3 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out">
-                {questData[name].fileName}
-              </button>
+              <div>
+                <a
+                  href={questData[name].fileDownload}
+                  className="px-5 py-4 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out"
+                >
+                  {questData[name].fileName}
+                </a>
+              </div>
             </div>
             {selectedQuest.learningPath.map((item, index) => (
               <div className="flex flex-col gap-3 w-full" key={item.level}>
-                <div
-                  onClick={() => onClickExpand(index)}
-                  className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col"
-                >
-                  <p className="text-white">{`${item.level} - ${item.title}`}</p>
-                  {item.clicked && (
-                    <div className="flex gap-3 items-center flex-col sm:flex-row ">
-                      <input
-                        onChange={(e) => setUserAnswer(e.target.value)}
-                        onClick={onInputClick}
-                        placeholder="Type your answer"
-                        className="h-5 pt-5 pb-5 pl-2 mt-2 hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
-                      />
-                      <button
-                        onClick={() => onAnswerSubmit(index)}
-                        className="px-3 py-2 mt-2 bg-black rounded text-white"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  )}
-                </div>
+                {item.disabled ? (
+                  <div className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col">
+                    <p className="text-white">{`${item.level} - This item has already been answered`}</p>
+                    {/* You can display a message or any other content for disabled items */}
+                  </div>
+                ) : (
+                  <div
+                    onClick={() => onClickExpand(index)}
+                    className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col"
+                  >
+                    <p className="text-white">{`${item.level} - ${item.title}`}</p>
+
+                    {item.clicked && (
+                      <>
+                        <p>{item.options}</p>
+                        <div className="flex gap-3 items-center flex-col sm:flex-row">
+                          <input
+                            onChange={(e) => setUserAnswer(e.target.value)}
+                            onClick={onInputClick}
+                            placeholder="Type your answer"
+                            className="h-5 pt-5 pb-5 pl-2 mt-2 hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
+                          />
+                          <button
+                            onClick={() => onCheckAnswer(index)}
+                            className="px-3 py-2 mt-2 bg-black rounded text-white"
+                          >
+                            Check
+                          </button>
+                          <button
+                            onClick={() => onAnswerSubmit(index)}
+                            className="px-3 py-2 mt-2 bg-black rounded text-white"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>

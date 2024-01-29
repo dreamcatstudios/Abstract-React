@@ -8,43 +8,43 @@ const Homepage = () => {
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
       level: "1",
-      title: "Alex_File01",
+      title: "Alex_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Mia_File02",
+      title: "Grace_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Adam_File03",
+      title: "Ethan_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Steve_File04",
+      title: "Deepfake_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Khushy_File05",
+      title: "Samuel_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Dave_File06",
+      title: "Aurora_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Tom_File07",
+      title: "Natalie_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Surbhi_File08",
+      title: "Surbhi_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Jim_File09",
+      title: "Jim_File",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Adam_File10",
+      title: "Adam_File",
     },
   ];
 
@@ -92,7 +92,7 @@ const Homepage = () => {
                 className="btn-img bg-cover bg-no-repeat sm:w-20 sm:h-20 h-14 w-14 hover:brightness-75"
                 style={{ backgroundImage: `url(${item.bg})` }}
               >
-                <h1 className="text-center whitespace-nowrap pt-[60px] sm:pt-[82px]">
+                <h1 className="text-center text-sm sm:text-base  sm:whitespace-nowrap pt-[60px] sm:pt-[82px]">
                   {item.title}
                 </h1>
               </div>
