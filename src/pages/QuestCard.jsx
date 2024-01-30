@@ -12,7 +12,7 @@ const QuestCard = () => {
   const { name } = useParams();
 
   const [questData, setQuestData] = useState({
-    alex_file: {
+    alex_01: {
       img: "/location.jpg",
       title: "Alex_File01 - Report",
       fileName: "Location_data.csv",
@@ -66,7 +66,7 @@ const QuestCard = () => {
         },
       ],
     },
-    grace_file: {
+    grace_02: {
       img: "/public/medical.jpg",
       title: "Grace_File02 - Report",
       fileName: "Medical_data.csv",
@@ -123,7 +123,7 @@ const QuestCard = () => {
         },
       ],
     },
-    ethan_file: {
+    ethan_03: {
       img: "/search.jpg",
       title: "Ethan_File03 - Report",
       fileName: "Search_data.csv",
@@ -176,7 +176,7 @@ const QuestCard = () => {
         },
       ],
     },
-    deepfake_file: {
+    deepfake_04: {
       img: "/deepfake.jpg",
       title: "Deepafake - Dataset",
       fileName: "Deepfake_data.csv",
@@ -228,7 +228,7 @@ const QuestCard = () => {
         },
       ],
     },
-    samuel_file: {
+    samuel_05: {
       img: "/creditCard.jpg",
       title: "Samuel_File05 - Report",
       fileName: "Credit_Transactions.csv",
@@ -286,7 +286,7 @@ const QuestCard = () => {
         },
       ],
     },
-    aurora_file: {
+    aurora_06: {
       img: "/charity.jpg",
       title: "Aurora_File05 - Report",
       fileName: "Charity.csv",
@@ -339,7 +339,7 @@ const QuestCard = () => {
         },
       ],
     },
-    natalie_file: {
+    natalie_07: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Natalie_File07 - Report",
       fileName: "Peroids_Data.csv",
@@ -392,7 +392,7 @@ const QuestCard = () => {
         },
       ],
     },
-    surbhi_file: {
+    surbhi_08: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Surbhi_File08 - Report",
       fileName: "Employment_data.csv",
@@ -444,7 +444,7 @@ const QuestCard = () => {
         },
       ],
     },
-    jim_file: {
+    jim_09: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Jim_File09 - Report",
       fileName: "Online_poll.csv",
@@ -498,7 +498,7 @@ const QuestCard = () => {
         },
       ],
     },
-    adam_file: {
+    adam_10: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       title: "Adam_File05 - Report",
       fileName: "Job_application.csv",

@@ -8,43 +8,43 @@ const Homepage = () => {
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
       level: "1",
-      title: "Alex_File",
+      title: "Alex_01",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Grace_File",
+      title: "Grace_02",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Ethan_File",
+      title: "Ethan_03",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Deepfake_File",
+      title: "Deepfake_04",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Samuel_File",
+      title: "Samuel_05",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Aurora_File",
+      title: "Aurora_06",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Natalie_File",
+      title: "Natalie_07",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Surbhi_File",
+      title: "Surbhi_08",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Jim_File",
+      title: "Jim_09",
     },
     {
       bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
-      title: "Adam_File",
+      title: "Adam_10",
     },
   ];
 
@@ -74,7 +74,10 @@ const Homepage = () => {
   `;
 
   return (
-    <div className="flex flex-col h-screen bg-[#0070f3] container">
+    <div
+      style={{ backgroundImage: `url("/Garuda Totem.jpg")` }}
+      className="flex flex-col h-screen  brightness-75 bg-cover container"
+    >
       {loading && (
         <div className="flex items-center justify-center h-screen">
           <FadeLoader color="#ffffff" css={override} size={15} />
