@@ -610,6 +610,11 @@ const QuestCard = () => {
     }
   };
 
+  const onDownloadClick = (e) => {
+    e.stopPropagation();
+    toast.success("File Downloaded! Check your downloads folder");
+  };
+
   const onCheckAnswer = (index) => {
     const correctAnswer = selectedQuest.learningPath[index].answer;
     const currentQuest = questData[name.toLowerCase()];
@@ -663,8 +668,9 @@ const QuestCard = () => {
           <div className="border border-[#fafafa] p-3 space-y-3">
             <div className="flex flex-col gap-4">
               <h1>{questData[name].downloadTag}</h1>
-              <div>
+              <div className="mb-2 sm:mb-0">
                 <a
+                  onClick={onDownloadClick}
                   href={questData[name].fileDownload}
                   className="px-5 py-4 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out"
                 >

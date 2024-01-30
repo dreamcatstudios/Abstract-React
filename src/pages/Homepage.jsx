@@ -6,44 +6,44 @@ import { FadeLoader } from "react-spinners";
 const Homepage = () => {
   const levels = [
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       level: "1",
       title: "Alex_01",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Grace_02",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Ethan_03",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Deepfake_04",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Samuel_05",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Aurora_06",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Natalie_07",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Surbhi_08",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Jim_09",
     },
     {
-      bg: "https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/folder-icon.png",
+      bg: "/folder.png",
       title: "Adam_10",
     },
   ];
