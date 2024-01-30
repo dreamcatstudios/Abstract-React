@@ -49,8 +49,7 @@ const QuestCard = () => {
         },
         {
           level: 4,
-          title:
-            "Is this person presently managing any chronic health issues? The possible answers are: ",
+          title: "Is this person presently managing any chronic health issues?",
           clicked: false,
           disabled: false,
           answer: "test4",
@@ -129,10 +128,10 @@ const QuestCard = () => {
       title: "Ethan_File03 - Report",
       fileName: "Search_data.csv",
       points: 0,
-      fileDownload: "",
+      fileDownload: "/search_queries.csv",
       downloadTag: "Ethan Data - Download",
       description:
-        "Here's some data that we managed to collect on Adam. Identify the data and help the AI algorithm determine Adam's social credit score.",
+        "Here's some data that we managed to collect on Ethan. Identify the data and help the AI algorithm determine Adam's social credit score.",
       learningPath: [
         {
           level: 1,
@@ -182,7 +181,7 @@ const QuestCard = () => {
       title: "Deepafake - Dataset",
       fileName: "Deepfake_data.csv",
       points: 0,
-      fileDownload: "",
+      fileDownload: "/Notion.zip",
       downloadTag: "Deepfake Images - Download",
       description:
         "Here are some of the images that we managed to collect on Deepfake. Identify the data and help the AI algorithm determine Deepfake's social credit score.",
@@ -684,29 +683,29 @@ const QuestCard = () => {
                 ) : (
                   <div
                     onClick={() => onClickExpand(index)}
-                    className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col"
+                    className="bg-[#333] items-center p-5 mt-1 sm:mt-3 rounded-sm flex-col"
                   >
                     <p className="text-white">{`${item.level} - ${item.title}`}</p>
 
                     {item.clicked && (
                       <>
                         <p>{item.options}</p>
-                        <div className="flex gap-3 items-center flex-col sm:flex-row">
+                        <div className="flex gap-3 items-center flex-col sm:flex-row align-middle mt-2">
                           <input
                             onChange={(e) => setUserAnswer(e.target.value)}
                             onClick={onInputClick}
                             placeholder="Type your answer"
-                            className="h-5 pt-5 pb-5 pl-2 mt-2 hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
+                            className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
                           />
                           <button
                             onClick={() => onCheckAnswer(index)}
-                            className="px-3 py-2 mt-2 bg-black rounded text-white"
+                            className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
                           >
                             Check
                           </button>
                           <button
                             onClick={() => onAnswerSubmit(index)}
-                            className="px-3 py-2 mt-2 bg-black rounded text-white"
+                            className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
                           >
                             Submit
                           </button>
