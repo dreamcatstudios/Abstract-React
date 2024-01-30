@@ -71,7 +71,7 @@ const QuestCard = () => {
       img: "/public/medical.jpg",
       title: "Grace_File02 - Report",
       fileName: "Medical_data.csv",
-      fileDownload: "",
+      fileDownload: "/medical_data.csv",
       points: 0,
       answer: "test",
       downloadTag: "Grace Data - Download",
@@ -179,7 +179,7 @@ const QuestCard = () => {
     },
     deepfake_file: {
       img: "/deepfake.jpg",
-      title: "Deepafek - Dataset",
+      title: "Deepafake - Dataset",
       fileName: "Deepfake_data.csv",
       points: 0,
       fileDownload: "",
@@ -189,7 +189,7 @@ const QuestCard = () => {
       learningPath: [
         {
           level: 1,
-          title: "Which image was a deepfake within Dataset_1",
+          title: "Which image was a deepfake within Dataset_1?",
           clicked: false,
           disabled: false,
           answer: "test1",
@@ -197,7 +197,7 @@ const QuestCard = () => {
         },
         {
           level: 2,
-          title: "Which image was a deepfake within Dataset_1",
+          title: "Which image was a deepfake within Dataset_2?",
           clicked: false,
           disabled: false,
           answer: "test2",
@@ -205,7 +205,7 @@ const QuestCard = () => {
         },
         {
           level: 3,
-          title: "Which image was a deepfake within Dataset_1",
+          title: "Which image was a deepfake within Dataset_3?",
           clicked: false,
           disabled: false,
           answer: "test3",
@@ -213,7 +213,7 @@ const QuestCard = () => {
         },
         {
           level: 4,
-          title: "Which image was a deepfake within Dataset_1",
+          title: "Which image was a deepfake within Dataset_4?",
           clicked: false,
           disabled: false,
           answer: "test4",
@@ -221,7 +221,7 @@ const QuestCard = () => {
         },
         {
           level: 5,
-          title: "Which image was a deepfake within Dataset_1",
+          title: "Which image was a deepfake within Dataset_5?",
           clicked: false,
           disabled: false,
           answer: "test5",
@@ -234,7 +234,7 @@ const QuestCard = () => {
       title: "Samuel_File05 - Report",
       fileName: "Credit_Transactions.csv",
       points: 0,
-      fileDownload: "",
+      fileDownload: "/transactions.csv",
       downloadTag: "Samuel Data - Download",
       description:
         "Here's some data that we managed to collect on Samuel. Identify the data and help the AI algorithm determine Khusy's social credit score.",

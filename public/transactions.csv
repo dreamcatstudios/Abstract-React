@@ -1,0 +1,85 @@
+Sam's Transaction History (January to March),,,,,,,
+Date,Time,Merchant Category,Amount,Tender Type,Payment Status,Credit Limit,Balance Carried Forward
+"Jan 1, 2023",12:00 PM,Rent Payments,"$1,200.00",Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Netflix,$22.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Verizon,$18.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,X-Box Game Pass,$1.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 11, 2023",1:00 PM,Walmart,$46.00,Credit,Paid On Time,"$5,000.00",$100.00
+"Jan 11, 2023",2:00 PM,Wendy's,$40.00,Credit,Paid On Time,"$5,000.00",$100.00
+"Jan 11, 2023",3:00 PM,Uber Eats,$25.00,Credit,Paid On Time,"$5,000.00",$100.00
+"Jan 11, 2023",4:00 PM,Lyft,$48.00,Credit,Paid On Time,"$5,000.00",$100.00
+"Jan 11, 2023",5:00 PM,Gas,$29.00,Credit,Paid On Time,"$5,000.00",$100.00
+"Jan 26, 2023",1:00 PM,Wendy's,$53.00,Credit,Paid Late,"$5,000.00",$250.00
+"Jan 30, 2023",1:00 PM,Uber Eats,$34.00,Credit,Paid On Time,"$5,000.00",$290.00
+"Jan 30, 2023",2:00 PM,Baskin Robbins,$23.00,Credit,Paid On Time,"$5,000.00",$290.00
+"Jan 30, 2023",3:00 PM,Wendy's,$47.00,Credit,Paid Late,"$5,000.00",$290.00
+"Jan 1, 2023",12:00 PM,Rent Payments,"$1,200.00",Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Netflix,$22.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Verizon,$18.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,X-Box Game Pass,$1.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Feb 1, 2023",1:00 PM,Amazon,$41.00,Credit,Paid On Time,"$5,000.00",$0.00
+"Feb 1, 2023",2:00 PM,Uber Eats,$41.00,Credit,Paid On Time,"$5,000.00",$0.00
+"Feb 2, 2023",1:00 PM,Walmart,$45.00,Credit,Paid Late,"$5,000.00",$10.00
+"Feb 4, 2023",1:00 PM,Gas,$15.00,Credit,Paid On Time,"$5,000.00",$30.00
+"Feb 4, 2023",2:00 PM,Walmart,$48.00,Credit,Paid On Time,"$5,000.00",$30.00
+"Feb 4, 2023",3:00 PM,Wendy's,$53.00,Credit,Paid On Time,"$5,000.00",$30.00
+"Feb 4, 2023",4:00 PM,Wendy's,$39.00,Credit,Paid Late,"$5,000.00",$30.00
+"Feb 4, 2023",5:00 PM,Groceries,$33.00,Credit,Paid On Time,"$5,000.00",$30.00
+"Feb 5, 2023",1:00 PM,7-Eleven,$17.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Feb 5, 2023",2:00 PM,Utility Bills,$34.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Feb 5, 2023",3:00 PM,Baskin Robbins,$39.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Feb 5, 2023",4:00 PM,Gas,$48.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Feb 6, 2023",1:00 PM,Lyft,$29.00,Credit,Paid On Time,"$5,000.00",$50.00
+"Feb 6, 2023",2:00 PM,Wendy's,$49.00,Credit,Paid Late,"$5,000.00",$50.00
+"Feb 6, 2023",3:00 PM,McDonald's,$42.00,Credit,Paid Late,"$5,000.00",$50.00
+"Feb 9, 2023",1:00 PM,Lyft,$55.00,Credit,Paid On Time,"$5,000.00",$80.00
+"Feb 9, 2023",2:00 PM,Groceries,$49.00,Credit,Paid On Time,"$5,000.00",$80.00
+"Feb 13, 2023",1:00 PM,Popeyes,$57.00,Credit,Paid On Time,"$5,000.00",$120.00
+"Feb 13, 2023",2:00 PM,Uber Eats,$42.00,Credit,Paid Late,"$5,000.00",$120.00
+"Feb 13, 2023",3:00 PM,Cracker Barrel,$37.00,Credit,Paid Late,"$5,000.00",$120.00
+"Feb 13, 2023",4:00 PM,Gas,$12.00,Credit,Paid Late,"$5,000.00",$120.00
+"Feb 13, 2023",5:00 PM,DoorDash,$55.00,Credit,Paid On Time,"$5,000.00",$120.00
+"Feb 14, 2023",1:00 PM,Lyft,$29.00,Credit,Paid On Time,"$5,000.00",$130.00
+"Feb 20, 2023",1:00 PM,DoorDash,$23.00,Credit,Paid On Time,"$5,000.00",$190.00
+"Jan 1, 2023",12:00 PM,Rent Payments,"$1,200.00",Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Netflix,$22.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,Verizon,$18.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Jan 1, 2023",12:00 PM,X-Box Game Pass,$1.99,Credit,Paid On Time,"$5,000.00",$0.00
+"Mar 2, 2023",1:00 PM,7-Eleven,$10.00,Credit,Paid On Time,"$5,000.00",$10.00
+"Mar 2, 2023",2:00 PM,Uber Eats,$19.00,Credit,Paid On Time,"$5,000.00",$10.00
+"Mar 2, 2023",3:00 PM,Lyft,$30.00,Credit,Paid On Time,"$5,000.00",$10.00
+"Mar 2, 2023",4:00 PM,Baskin Robbins,$56.00,Credit,Paid Late,"$5,000.00",$10.00
+"Mar 2, 2023",5:00 PM,Walmart,$50.00,Credit,Paid On Time,"$5,000.00",$10.00
+"Mar 5, 2023",1:00 PM,Cracker Barrel,$42.00,Credit,Paid Late,"$5,000.00",$40.00
+"Mar 5, 2023",2:00 PM,Popeyes,$11.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Mar 5, 2023",3:00 PM,McDonald's,$19.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Mar 5, 2023",4:00 PM,Gas,$30.00,Credit,Paid Late,"$5,000.00",$40.00
+"Mar 5, 2023",5:00 PM,7-Eleven,$55.00,Credit,Paid On Time,"$5,000.00",$40.00
+"Mar 6, 2023",1:00 PM,McDonald's,$49.00,Credit,Paid On Time,"$5,000.00",$50.00
+"Mar 6, 2023",2:00 PM,DoorDash,$13.00,Credit,Paid On Time,"$5,000.00",$50.00
+"Mar 6, 2023",3:00 PM,Lyft,$19.00,Credit,Paid On Time,"$5,000.00",$50.00
+"Mar 10, 2023",1:00 PM,Utility Bills,$32.00,Credit,Paid On Time,"$5,000.00",$90.00
+"Mar 10, 2023",2:00 PM,Walmart,$58.00,Credit,Paid On Time,"$5,000.00",$90.00
+"Mar 10, 2023",3:00 PM,Utility Bills,$37.00,Credit,Paid Late,"$5,000.00",$90.00
+"Mar 10, 2023",4:00 PM,Groceries,$46.00,Credit,Paid On Time,"$5,000.00",$90.00
+"Mar 12, 2023",1:00 PM,Amazon,$46.00,Credit,Paid On Time,"$5,000.00",$110.00
+"Mar 12, 2023",2:00 PM,Gas,$47.00,Credit,Paid Late,"$5,000.00",$110.00
+"Mar 15, 2023",1:00 PM,Amazon,$32.00,Credit,Paid On Time,"$5,000.00",$140.00
+"Mar 15, 2023",2:00 PM,Uber Eats,$51.00,Credit,Paid On Time,"$5,000.00",$140.00
+"Mar 15, 2023",3:00 PM,Popeyes,$12.00,Credit,Paid On Time,"$5,000.00",$140.00
+"Mar 15, 2023",4:00 PM,Wendy's,$20.00,Credit,Paid On Time,"$5,000.00",$140.00
+"Mar 15, 2023",5:00 PM,Amazon,$18.00,Credit,Paid Late,"$5,000.00",$140.00
+"Mar 25, 2023",1:00 PM,7-Eleven,$59.00,Credit,Paid On Time,"$5,000.00",$240.00
+"Mar 25, 2023",2:00 PM,Lyft,$41.00,Credit,Paid On Time,"$5,000.00",$240.00
+"Mar 25, 2023",3:00 PM,Gas,$56.00,Credit,Paid On Time,"$5,000.00",$240.00
+"Mar 25, 2023",4:00 PM,Popeyes,$37.00,Credit,Paid On Time,"$5,000.00",$240.00
+"Mar 26, 2023",1:00 PM,Gas,$58.00,Credit,Paid On Time,"$5,000.00",$250.00
+"Mar 28, 2023",1:00 PM,7-Eleven,$18.00,Credit,Paid Late,"$5,000.00",$270.00
+"Mar 28, 2023",2:00 PM,Uber Eats,$21.00,Credit,Paid On Time,"$5,000.00",$270.00
+"Mar 28, 2023",3:00 PM,Wendy's,$15.00,Credit,Paid On Time,"$5,000.00",$270.00
+"Mar 28, 2023",4:00 PM,Amazon,$15.00,Credit,Paid On Time,"$5,000.00",$270.00
+"Mar 29, 2023",1:00 PM,Popeyes,$19.00,Credit,Paid On Time,"$5,000.00",$280.00
+"Mar 29, 2023",2:00 PM,Baskin Robbins,$57.00,Credit,Paid Late,"$5,000.00",$280.00
+"Mar 31, 2023",1:00 PM,Walmart,$43.00,Credit,Paid Late,"$5,000.00",$300.00
+"Mar 31, 2023",2:00 PM,Wendy's,$57.00,Credit,Paid On Time,"$5,000.00",$300.00
+"Mar 31, 2023",3:00 PM,Wendy's,$39.00,Credit,Paid On Time,"$5,000.00",$300.00
