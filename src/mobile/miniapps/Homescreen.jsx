@@ -11,6 +11,7 @@ const Homescreen = () => {
     settings: "settings",
     gallery: "gallery",
     messaging: "messaging",
+    activities: "activities",
   };
 
   const dispatch = useDispatch();
@@ -86,7 +87,7 @@ const Homescreen = () => {
         {/* Apps code */}
         <div className="grid grid-cols-2 gap-3">
           <div
-            onClick={() => onAppClick(apps.settings)}
+            onClick={() => onAppClick(apps.activities)}
             className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
           >
             <svg
@@ -104,21 +105,18 @@ const Homescreen = () => {
             </svg>
           </div>
           <div
-            onClick={() => onAppClick(apps.messaging)}
+            onClick={() => window.open("https://gmail.com", "_blank")}
             className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
           >
             <svg
-              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
+              fill="currentColor"
               width="1.2em"
               height="1.2em"
-              class="text-black "
-              data-v-e4c37606=""
+              class="text-black"
             >
-              <path
-                fill="currentColor"
-                d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8m5 9v-2h-2v2h2m-4 0v-2h-2v2h2m-4 0v-2H7v2h2Z"
-              ></path>
+              <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path>
             </svg>
           </div>
           <div
@@ -139,19 +137,19 @@ const Homescreen = () => {
               ></path>
             </svg>
           </div>
-          <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+          <div
+            onClick={() => window.open("https://google.com", "_blank")}
+            className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+          >
             <svg
-              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
+              fill="currentColor"
               width="1.2em"
               height="1.2em"
-              class="text-black"
-              data-v-e4c37606=""
+              class="text-black "
             >
-              <path
-                fill="currentColor"
-                d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
-              ></path>
+              <path d="M3.06364 7.50914C4.70909 4.24092 8.09084 2 12 2C14.6954 2 16.959 2.99095 18.6909 4.60455L15.8227 7.47274C14.7864 6.48185 13.4681 5.97727 12 5.97727C9.39542 5.97727 7.19084 7.73637 6.40455 10.1C6.2045 10.7 6.09086 11.3409 6.09086 12C6.09086 12.6591 6.2045 13.3 6.40455 13.9C7.19084 16.2636 9.39542 18.0227 12 18.0227C13.3454 18.0227 14.4909 17.6682 15.3864 17.0682C16.4454 16.3591 17.15 15.3 17.3818 14.05H12V10.1818H21.4181C21.5364 10.8363 21.6 11.5182 21.6 12.2273C21.6 15.2727 20.5091 17.8363 18.6181 19.5773C16.9636 21.1046 14.7 22 12 22C8.09084 22 4.70909 19.7591 3.06364 16.4909C2.38638 15.1409 2 13.6136 2 12C2 10.3864 2.38638 8.85911 3.06364 7.50914Z"></path>
             </svg>
           </div>
         </div>

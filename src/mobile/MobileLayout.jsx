@@ -6,6 +6,7 @@ import { popApp } from "./store/MobileStore";
 import Settings from "./miniapps/Settings";
 import Gallery from "./miniapps/Gallery";
 import Messaging from "./miniapps/Messaging";
+import Activities from "./miniapps/Activities";
 
 const MobileLayout = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,8 @@ const MobileLayout = () => {
           return <Gallery />;
         case "messaging":
           return <Messaging />;
+        case "activities":
+          return <Activities />;
         default:
           break;
       }
@@ -34,8 +37,8 @@ const MobileLayout = () => {
   };
 
   return (
-    <div className="container">
-      <div className="flex flex-col w-[20rem] h-[35rem] mt-7  ">
+    <div className="w-full h-[100vh] relative flex  items-center justify-center bg-black">
+      <div className="flex flex-col w-[20rem] h-[35rem] absolute top-16   ]">
         <div className="border-[10px] h-full rounded-t-md  bg-[#f0f0f0] ">
           {/* App screen is rendering here */}
           {screen !== undefined && screen !== null ? screen : <Homescreen />}
