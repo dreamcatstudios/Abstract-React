@@ -28,7 +28,7 @@ const QuestCard = () => {
           title: "What is the current residential address for this individual?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[Wisconssin,Texas,Caliornia]",
         },
         {
@@ -36,7 +36,7 @@ const QuestCard = () => {
           title: "In which field does this person work?",
           clicked: false,
           disabled: false,
-          answer: "test2",
+          answer: "1",
           options: "[Engineering, Medicine, Accounting]",
         },
         {
@@ -44,7 +44,7 @@ const QuestCard = () => {
           title: "Does this individual have any dependent children?",
           clicked: false,
           disabled: false,
-          answer: "test3",
+          answer: "1",
           options: "[yes, no, can't say]",
         },
         {
@@ -52,7 +52,7 @@ const QuestCard = () => {
           title: "Is this person presently managing any chronic health issues?",
           clicked: false,
           disabled: false,
-          answer: "test4",
+          answer: "1",
           options: "[yes, no, can't say]",
         },
         {
@@ -61,7 +61,7 @@ const QuestCard = () => {
             "Which religious affiliation does this individual identify with?",
           clicked: false,
           disabled: false,
-          answer: "test5",
+          answer: "1",
           options: "[Judaism, Christianity, Islam]",
         },
       ],
@@ -82,7 +82,7 @@ const QuestCard = () => {
           title: "Does this individual have any medical conditions?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[Yes, No, Cannot Say]",
         },
         {
@@ -138,7 +138,7 @@ const QuestCard = () => {
           title: "Does Ethan possess any pets in his household?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[Yes, Can't say, No]",
         },
         {
@@ -191,7 +191,7 @@ const QuestCard = () => {
           title: "Which image was a deepfake within Dataset_1?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[1,2,3]",
         },
         {
@@ -244,7 +244,7 @@ const QuestCard = () => {
             "Regarding this person's typical acquisitions, what do we know?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[groceries, unable to determine, or entertainment.]",
         },
         {
@@ -301,7 +301,7 @@ const QuestCard = () => {
           title: "What do we know about this person sleep cycle?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[early bird,can't tell,late riser]",
         },
         {
@@ -353,7 +353,7 @@ const QuestCard = () => {
           title: "What do we know about Natalie's news consumption?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options:
             "[politically engaged, mainstream media consumer, alternative sources]",
         },
@@ -407,7 +407,7 @@ const QuestCard = () => {
           title: "What is Khushy's favorite hobby?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[1,2,3]",
         },
         {
@@ -460,7 +460,7 @@ const QuestCard = () => {
           title: "What is Khushy's favorite hobby?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[1,2,3]",
         },
         {
@@ -513,7 +513,7 @@ const QuestCard = () => {
           title: "What is Khushy's favorite hobby?",
           clicked: false,
           disabled: false,
-          answer: "test1",
+          answer: "1",
           options: "[1,2,3]",
         },
         {
@@ -669,8 +669,13 @@ const QuestCard = () => {
             />
             <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
           </div>
-          <div>
-            <p className="mb-2">{selectedQuest.description}</p>
+          <div className="mb-2">
+            <p className="">{selectedQuest.description}</p>
+            <p className=" font-semibold">
+              Tip:- Click the question to see options; then select and submit
+              your answer (1, 2, or 3). Any other response will be marked
+              incorrect.
+            </p>
           </div>
 
           <div className="border border-[#fafafa] p-3 space-y-3">
