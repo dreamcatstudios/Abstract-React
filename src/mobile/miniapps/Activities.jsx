@@ -3,10 +3,10 @@ import React from "react";
 const Activities = () => {
   const [time, setTime] = React.useState(new Date().toLocaleTimeString());
   return (
-    <div className="flex rounded-md  flex-col justify-center items-center relative h-full bg-blue-700 ">
+    <div className="flex rounded-md  flex-col justify-center items-center relative h-full bg-blue-900 ">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
-        {time.slice(0, time.lastIndexOf(" "))}
+        <h1 className="text-white">{time.slice(0, time.lastIndexOf(":"))}</h1>
         <div className="bg-black p-[12px] rounded-[100%]"></div>
         <div class="flex gap-1" data-v-4a86e42e="">
           <svg
@@ -53,23 +53,20 @@ const Activities = () => {
       {/* Notch Code */}
 
       {/*<--- Activities code ---> */}
-      <div className="overflow-scroll mt-12 bg-blue-700 w-full h-full">
+      <div className="overflow-scroll mt-12 bg-blue-900 w-full h-full">
         <h1 className="text-2xl text-white font-bold pl-2">Activities</h1>
         <div className="flex flex-col gap-2 p-2 w-full">
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
-                <img
-                  className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
-                />
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full" src="/mobile/TikTok.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">TikTok</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">03h 12m</p>
                 </div>
               </div>
             </div>
@@ -78,17 +75,14 @@ const Activities = () => {
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
-                <img
-                  className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
-                />
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Instagram.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">Instagram</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">01h 07m</p>
                 </div>
               </div>
             </div>
@@ -97,17 +91,14 @@ const Activities = () => {
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
-                <img
-                  className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
-                />
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Snapchat.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">Snapchat</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">41m</p>
                 </div>
               </div>
             </div>
@@ -116,17 +107,14 @@ const Activities = () => {
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
-                <img
-                  className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
-                />
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Duolingo.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">Duolingo</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">55m</p>
                 </div>
               </div>
             </div>
@@ -135,17 +123,14 @@ const Activities = () => {
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
-                <img
-                  className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
-                />
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/public/mobile/CNN.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">CNN</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">25m</p>
                 </div>
               </div>
             </div>
@@ -154,17 +139,65 @@ const Activities = () => {
           {/*<-- App 1  --> */}
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
-              <div className="flex justify-center items-center h-full w-1/3">
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
                 <img
                   className="w-full h-full "
-                  src="https://www.cdnlogo.com/logos/f/54/figma.svg"
+                  src="/public/mobile/Tinder.png"
                 />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
-                <h1 className="text-black text-lg font-bold">Figma</h1>
+                <h1 className="text-black text-lg font-bold">Tinder</h1>
                 <div className="w-full flex  justify-between pr-2 ">
                   <p className="text-black text-sm">Today</p>
-                  <p className="text-black text-sm">09h 41m</p>
+                  <p className="text-black text-sm">49m</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*<-- App 1  --> */}
+          {/*<-- App 1  --> */}
+          <div className="w-full bg-white h-18 rounded-md shadow-md ">
+            <div className="flex justify-between items-center h-full">
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Safari.png" />
+              </div>
+              <div className="flex flex-col justify-center items-start h-full w-2/3">
+                <h1 className="text-black text-lg font-bold">Safari</h1>
+                <div className="w-full flex  justify-between pr-2 ">
+                  <p className="text-black text-sm">Today</p>
+                  <p className="text-black text-sm">25m</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*<-- App 1  --> */}
+          {/*<-- App 1  --> */}
+          <div className="w-full bg-white h-18 rounded-md shadow-md ">
+            <div className="flex justify-between items-center h-full">
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Weather.png" />
+              </div>
+              <div className="flex flex-col justify-center items-start h-full w-2/3">
+                <h1 className="text-black text-lg font-bold">Weather</h1>
+                <div className="w-full flex  justify-between pr-2 ">
+                  <p className="text-black text-sm">Today</p>
+                  <p className="text-black text-sm">7m</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*<-- App 1  --> */}
+          {/*<-- App 1  --> */}
+          <div className="w-full bg-white h-18 rounded-md shadow-md ">
+            <div className="flex justify-between items-center h-full">
+              <div className="flex justify-center items-center h-full w-1/3 p-5">
+                <img className="w-full h-full " src="/mobile/Calculator.png" />
+              </div>
+              <div className="flex flex-col justify-center items-start h-full w-2/3">
+                <h1 className="text-black text-lg font-bold">Calculator</h1>
+                <div className="w-full flex  justify-between pr-2 ">
+                  <p className="text-black text-sm">Today</p>
+                  <p className="text-black text-sm">2m</p>
                 </div>
               </div>
             </div>
