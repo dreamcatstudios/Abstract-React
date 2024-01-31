@@ -580,6 +580,13 @@ const QuestCard = () => {
   const onAnswerSubmit = (index) => {
     const correctAnswer = selectedQuest.learningPath[index].answer;
     const currentQuest = questData[name.toLowerCase()];
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 250);
+    toast.success("Answer Submitted");
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       const updatedPoints = currentQuest.points + 1;
@@ -703,12 +710,12 @@ const QuestCard = () => {
                             placeholder="Type your answer"
                             className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
                           />
-                          <button
+                          {/* <button
                             onClick={() => onCheckAnswer(index)}
                             className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
                           >
                             Check
-                          </button>
+                          </button> */}
                           <button
                             onClick={() => onAnswerSubmit(index)}
                             className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
