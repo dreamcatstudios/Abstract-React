@@ -21,7 +21,7 @@ const QuestCard = () => {
       fileDownload: "/location_sheet.csv",
       downloadTag: "Alex Data - Download",
       description:
-        "Here's some data that we managed to collect on Alex. Identify the data and help the AI algorithm determine Alex's social credit score.",
+        "Alex's location has been exposed in a leak, which isn't shocking given how many apps and services track user locations under the guise of service improvement. These entities frequently monitor and use location data for purposes such as targeted ads and creating detailed social profiles.",
       learningPath: [
         {
           level: 1,
@@ -75,7 +75,7 @@ const QuestCard = () => {
       answer: "test",
       downloadTag: "Grace Data - Download",
       description:
-        "Here's some data that we managed to collect on Grace. Identify the data and help the AI algorithm determine Mia's social credit score.",
+        "Grace's medical information was unfortunately part of a recent data breach, a disconcerting trend given the increasing number of healthcare organizations and tech companies collecting sensitive health data without robust protection measures in place.",
       learningPath: [
         {
           level: 1,
@@ -131,7 +131,7 @@ const QuestCard = () => {
       fileDownload: "/search_queries.csv",
       downloadTag: "Ethan Data - Download",
       description:
-        "Here's some data that we managed to collect on Ethan. Identify the data and help the AI algorithm determine Adam's social credit score.",
+        "Ethan had his search history uncovered in a disturbing privacy violation, highlighting the growing concern over online tracking practices where browsing activity is monitored by countless websites and ad networks to serve personalized content and targeted advertisements.",
       learningPath: [
         {
           level: 1,
@@ -236,7 +236,7 @@ const QuestCard = () => {
       fileDownload: "/transactions.csv",
       downloadTag: "Samuel Data - Download",
       description:
-        "Here's some data that we managed to collect on Samuel. Identify the data and help the AI algorithm determine Khusy's social credit score.",
+        "Samuel fell victim to a credit transaction data leak, an unsettling reminder of the vulnerabilities surrounding financial data security as more businesses digitize payment systems while failing to implement adequate safeguards against cyber attacks.",
       learningPath: [
         {
           level: 1,
@@ -294,7 +294,7 @@ const QuestCard = () => {
       fileDownload: "/activityTracker.png",
       downloadTag: "Aurora Data - Download",
       description:
-        "Here's some data that we managed to collect on Aurora. Identify the data and help the AI algorithm determine Aurora's social credit score.",
+        "Tragically, Aurora suffered from a significant data leak revealing her fitness data collected through her smartwatch device and application, bringing attention to insufficient data protection standards among makers of wearables and software providers alike.",
       learningPath: [
         {
           level: 1,
@@ -346,7 +346,7 @@ const QuestCard = () => {
       fileDownload: "/mobile",
       downloadTag: "Natalie Phone - Checkout",
       description:
-        "Here's some data that we managed to collect on Natalie. Identify the data and help the AI algorithm determine Natalie's social credit score.",
+        "Natalie experienced a distressing leak of her app usage data, drawing attention to questionable data collection practices and weak privacy protections prevalent in today's digital landscape.",
       learningPath: [
         {
           level: 1,
