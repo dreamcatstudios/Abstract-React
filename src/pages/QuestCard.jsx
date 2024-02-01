@@ -657,102 +657,127 @@ const QuestCard = () => {
   ];
 
   return (
-    <div className="h-full container bg-black  flex flex-col justify-center items-center">
-      <ToastContainer />
-      <div className="w-full h-[100%] flex flex-col justify-between bg-black">
-        <div className="border border-[#fafafa] p-5 mt-5 mb-5">
-          <div className="flex-col">
-            <img
-              src={selectedQuest.img}
-              alt="profile-photo"
-              className="w-full h-36 sm:h-64 h object-cover mb-2 rounded-sm"
-            />
-            <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
-          </div>
-          <div className="mb-2">
-            <p className="">{selectedQuest.description}</p>
-            <p className=" font-semibold">
-              Tip:- Click the question to see options; then select and submit
-              your answer (1, 2, or 3). Any other response will be marked
-              incorrect.
-            </p>
-          </div>
-
-          <div className="border border-[#fafafa] p-3 space-y-3">
-            <div className="flex flex-col gap-4">
-              <h1>{questData[name].downloadTag}</h1>
-              <div className="mb-2 sm:mb-0">
-                <a
-                  onClick={onDownloadClick}
-                  href={questData[name].fileDownload}
-                  className="px-5 py-4 border-white border hover:bg-white hover:text-black hover:transition-all hover:delay-50 hover:ease-in-out"
-                >
-                  {questData[name].fileName}
-                </a>
-              </div>
+    <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] h-full w-full">
+      <div className="h-full container flex flex-col justify-center items-center">
+        <ToastContainer />
+        <div className="w-full h-[100%] flex flex-col justify-between ">
+          <div className="border border-[#fafafa] p-5 mt-5 mb-5">
+            <div className="flex-col">
+              <img
+                src={selectedQuest.img}
+                alt="profile-photo"
+                className="w-full h-36 sm:h-64 h object-cover mb-2 rounded-sm"
+              />
+              <h1 className="text-2xl font-bold">{selectedQuest.title}</h1>
             </div>
-            {selectedQuest.learningPath.map((item, index) => (
-              <div className="flex flex-col gap-3 w-full" key={item.level}>
-                {item.disabled ? (
-                  <div className="bg-[#333] items-center p-5 mt-2 rounded-sm flex-col">
-                    <p className="text-white">{`${item.level} - This item has already been answered`}</p>
-                    {/* You can display a message or any other content for disabled items */}
-                  </div>
-                ) : (
-                  <div
-                    onClick={() => onClickExpand(index)}
-                    className="bg-[#333] items-center p-5 mt-1 sm:mt-3 rounded-sm flex-col"
-                  >
-                    <p className="text-white">{`${item.level} - ${item.title}`}</p>
+            <div className="mb-2">
+              <p className="">{selectedQuest.description}</p>
+              <p className=" font-semibold">
+                Tip:- Click the question to see options; then select and submit
+                your answer (1, 2, or 3). Any other response will be marked
+                incorrect.
+              </p>
+            </div>
 
-                    {item.clicked && (
-                      <>
-                        <p>{item.options}</p>
-                        <div className="flex gap-3 items-center flex-col sm:flex-row align-middle mt-2">
-                          <input
-                            onChange={(e) => setUserAnswer(e.target.value)}
-                            onClick={onInputClick}
-                            placeholder="Type your answer"
-                            className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
-                          />
-                          {/* <button
+            <div className="border border-[#fafafa] p-3 space-y-3">
+              <div className="flex flex-col gap-4">
+                <h1>{questData[name].downloadTag}</h1>
+                <div className="mb-2 sm:mb-0">
+                  <a
+                    onClick={onDownloadClick}
+                    href={questData[name].fileDownload}
+                    className="px-5 py-4  bg-white text-black hover:bg-black hover:border-white hover:border hover:text-white hover:bg-transparent hover:transition-all hover:delay-50 hover:ease-in-out"
+                  >
+                    {questData[name].fileName}
+                  </a>
+                </div>
+              </div>
+              {selectedQuest.learningPath.map((item, index) => (
+                <div className="flex flex-col gap-3 w-full" key={item.level}>
+                  {item.disabled ? (
+                    <div className="bg-gray-800  items-center p-5 mt-2 rounded-sm flex-col">
+                      <p className="text-white">{`${item.level} - This item has already been answered`}</p>
+                      {/* You can display a message or any other content for disabled items */}
+                    </div>
+                  ) : (
+                    <div
+                      onClick={() => onClickExpand(index)}
+                      className="bg-gray-800 items-center p-5 mt-1 sm:mt-3 rounded-sm flex-col"
+                    >
+                      <div className="flex justify-between">
+                        <p className="text-white">{`${item.level} - ${item.title}`}</p>
+                        {item.clicked ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width={"1.2rem"}
+                            height={"1.2rem"}
+                          >
+                            <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                          </svg>
+                        ) : (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width={"1.2rem"}
+                            height={"1.2rem"}
+                          >
+                            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                          </svg>
+                        )}
+                      </div>
+
+                      {item.clicked && (
+                        <>
+                          <p>{item.options}</p>
+                          <div className="flex gap-3 items-center flex-col sm:flex-row align-middle mt-2">
+                            <input
+                              onChange={(e) => setUserAnswer(e.target.value)}
+                              onClick={onInputClick}
+                              placeholder="Type your answer"
+                              className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
+                            />
+                            {/* <button
                             onClick={() => onCheckAnswer(index)}
                             className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
                           >
                             Check
                           </button> */}
-                          <button
-                            onClick={() => onAnswerSubmit(index)}
-                            className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
-                          >
-                            Submit
-                          </button>
-                        </div>
-                      </>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
+                            <button
+                              onClick={() => onAnswerSubmit(index)}
+                              className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
+          <button
+            onClick={finishData}
+            className="bg-[#fafafa] text-black p-3 mb-16 sm:mb-12  hover:text-white hover:bg-black hover:transition-all hover:delay-75 hover:ease-in-out hover:border-white hover:border"
+          >
+            Finish
+          </button>
         </div>
-        <button
-          onClick={finishData}
-          className="bg-[#fafafa] text-black p-3 mb-16 sm:mb-12  hover:text-white hover:bg-black hover:transition-all hover:delay-75 hover:ease-in-out hover:border-white hover:border"
-        >
-          Finish
-        </button>
-      </div>
-      {/*<--- Chart Component ---> */}
-      {showChart && (
-        <div className="w-full flex flex-col items-center justify-center pt-10 pb-10 mb-10  border border-[#fafafa]">
-          <h1 className="text-5xl text-center  pb-5 font-bold">Your Score</h1>
-          <PieChart width={400} height={400} data={pieChartData} />
-          <h1 className="text-5xl text-center mt-10 font-bold">{`Total Points: ${totalPoints} / ${maxPoints}`}</h1>
-        </div>
-      )}
+        {/*<--- Chart Component ---> */}
+        {showChart && (
+          <div className="w-full flex flex-col items-center justify-center pt-10 pb-10 mb-10  border border-[#fafafa]">
+            <h1 className="text-5xl text-center  pb-5 font-bold">Your Score</h1>
+            <PieChart width={400} height={400} data={pieChartData} />
+            <h1 className="text-5xl text-center mt-10 font-bold">{`Total Points: ${totalPoints} / ${maxPoints}`}</h1>
+          </div>
+        )}
 
-      {/*<--- Chart Component ---> */}
+        {/*<--- Chart Component ---> */}
+      </div>
     </div>
   );
 };
