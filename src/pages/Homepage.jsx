@@ -88,7 +88,7 @@ const Homepage = () => {
           {levels.map((item, index) => (
             <Link
               key={index}
-              to={`file/${item.title.toLowerCase().replace(/\s+/g, "")}`}
+              to={`/file/${item.title.toLowerCase().replace(/\s+/g, "")}`}
               className=""
             >
               <div
