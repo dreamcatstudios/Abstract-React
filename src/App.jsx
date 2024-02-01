@@ -46,9 +46,9 @@ const App = () => {
             <Route path="/" element={<Homepage />} />
             <Route path="/splash" element={<Splash />} />
             <Route path="/points" element={<Points />} />
-            <Route path="/mobile/:level" element={<Mobile />} />
-            <Route path="/file/:name" element={<QuestCard />} />
-            <Route path="/quest/:difficulty/:number" element={<Question />} />
+            <Route path="mobile/:level" element={<Mobile />} />
+            <Route path="file/:name" element={<QuestCard />} />
+            <Route path="quest/:difficulty/:number" element={<Question />} />
             {/* Add more routes for different pages if needed */}
           </Routes>
         </div>
