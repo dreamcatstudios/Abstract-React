@@ -8,9 +8,12 @@ import Gallery from "./miniapps/Gallery";
 import Messaging from "./miniapps/Messaging";
 import Activities from "./miniapps/Activities";
 import { useParams } from "react-router-dom";
+import Instapost from "./miniapps/Instapost";
+import Vault from "./miniapps/Vault";
 
 const MobileLayout = () => {
   const dispatch = useDispatch();
+  let { level } = useParams();
 
   const screen = useSelector((state) => {
     if (state.appState.appNames.length === 1) {
@@ -27,21 +30,27 @@ const MobileLayout = () => {
           return <Messaging />;
         case "activities":
           return <Activities />;
+        case "instapost":
+          return <Instapost />;
+        case "vault":
+          return <Vault />;
         default:
           break;
       }
     }
   });
 
-
   const onBackClick = () => {
     console.log("clicked");
     dispatch(popApp());
   };
 
+  useEffect(() => {
+    console.log("param:", level);
+  }, []);
   return (
-    <div className="w-full h-[100vh] relative flex  items-center justify-center bg-black">
-      <div className="flex flex-col w-[20rem] h-[35rem] absolute top-16   ]">
+    <div className="flex items-center justify-center absolute top-10 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+      <div className="flex flex-col w-[20rem] h-[35rem] ">
         <div className="border-[10px] h-full rounded-t-md  bg-[#f0f0f0] ">
           {/* App screen is rendering here */}
           {screen !== undefined && screen !== null ? screen : <Homescreen />}
@@ -49,7 +58,7 @@ const MobileLayout = () => {
 
         {/* Bottom */}
         <div className="bg-[#f0f0f0] rounded-b-md text-white flex justify-around items-center ">
-          {/* You might want to add unique keys for the following SVG elements */}
+          {/*<-- Bottom Android Navigation code -->*/}
           <div className="flex justify-evenly w-full pb-2">
             <svg
               key="svg1"
@@ -92,7 +101,7 @@ const MobileLayout = () => {
             </svg>
           </div>
         </div>
-        {/* Bottom */}
+        {/*<-- Bottom  -->*/}
       </div>
     </div>
   );

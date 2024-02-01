@@ -14,6 +14,8 @@ const Homescreen = () => {
     gallery: "gallery",
     messaging: "messaging",
     activities: "activities",
+    instapost: "instapost",
+    vault: "vault",
   };
 
   const dispatch = useDispatch();
@@ -23,10 +25,7 @@ const Homescreen = () => {
   };
 
   useEffect(() => {
-    console.log("param:", level);
-  }, []);
-
-  useEffect(() => {
+    console.log("level:", level);
     const intervalId = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
       setDate(new Date().toLocaleDateString());
@@ -111,7 +110,9 @@ const Homescreen = () => {
                 </svg>
               </div>
               <div
-                onClick={() => window.open("https://gmail.com", "_blank")}
+                onClick={() =>
+                  window.open("https://www.google.com/gmail/about/", "_blank")
+                }
                 className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
               >
                 <svg
@@ -143,7 +144,7 @@ const Homescreen = () => {
                 </svg>
               </div>
               <div
-                onClick={() => window.open("https://google.com", "_blank")}
+                onClick={() => window.open("https://www.google.com/", "_blank")}
                 className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
               >
                 <svg
@@ -160,7 +161,78 @@ const Homescreen = () => {
             </div>
           </>
         )}
-        {/* <--- Home Screen Code ---> */}
+        {/* <--- Activities Code ---> */}
+
+        {/* <-- Vault Level */}
+        {level.toLowerCase() === "social" && (
+          <>
+            <div className="grid grid-cols-2 gap-3">
+              <div
+                onClick={() => onAppClick(apps.instapost)}
+                className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="1.2em"
+                  height="1.2em"
+                  className="text-black"
+                >
+                  <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22H2L4.92893 19.0711C3.11929 17.2614 2 14.7614 2 12C2 6.47715 6.47715 2 12 2ZM16 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z"></path>
+                </svg>
+              </div>
+              <div
+                onClick={() =>
+                  window.open("https://www.google.com/gmail/about/", "_blank")
+                }
+                className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="1.2em"
+                  height="1.2em"
+                  className="text-black"
+                >
+                  <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path>
+                </svg>
+              </div>
+              <div
+                onClick={() => onAppClick(apps.vault)}
+                className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="1.2em"
+                  height="1.2em"
+                  className="text-black"
+                >
+                  <path d="M18.0049 19.9998H6.00488V21.9998H4.00488V19.9998H3.00488C2.4526 19.9998 2.00488 19.5521 2.00488 18.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979H21.0049C21.5572 2.99979 22.0049 3.4475 22.0049 3.99979V18.9998C22.0049 19.5521 21.5572 19.9998 21.0049 19.9998H20.0049V21.9998H18.0049V19.9998ZM11.0049 13.8738V16.9998H13.0049V13.8738C14.7301 13.4297 16.0049 11.8636 16.0049 9.99979C16.0049 7.79065 14.214 5.99979 12.0049 5.99979C9.79574 5.99979 8.00488 7.79065 8.00488 9.99979C8.00488 11.8636 9.27966 13.4297 11.0049 13.8738ZM12.0049 11.9998C10.9003 11.9998 10.0049 11.1044 10.0049 9.99979C10.0049 8.89522 10.9003 7.99979 12.0049 7.99979C13.1095 7.99979 14.0049 8.89522 14.0049 9.99979C14.0049 11.1044 13.1095 11.9998 12.0049 11.9998Z"></path>
+                </svg>
+              </div>
+              <div
+                onClick={() => window.open("https://www.google.com/", "_blank")}
+                className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="1.2em"
+                  height="1.2em"
+                  className="text-black "
+                >
+                  <path d="M3.06364 7.50914C4.70909 4.24092 8.09084 2 12 2C14.6954 2 16.959 2.99095 18.6909 4.60455L15.8227 7.47274C14.7864 6.48185 13.4681 5.97727 12 5.97727C9.39542 5.97727 7.19084 7.73637 6.40455 10.1C6.2045 10.7 6.09086 11.3409 6.09086 12C6.09086 12.6591 6.2045 13.3 6.40455 13.9C7.19084 16.2636 9.39542 18.0227 12 18.0227C13.3454 18.0227 14.4909 17.6682 15.3864 17.0682C16.4454 16.3591 17.15 15.3 17.3818 14.05H12V10.1818H21.4181C21.5364 10.8363 21.6 11.5182 21.6 12.2273C21.6 15.2727 20.5091 17.8363 18.6181 19.5773C16.9636 21.1046 14.7 22 12 22C8.09084 22 4.70909 19.7591 3.06364 16.4909C2.38638 15.1409 2 13.6136 2 12C2 10.3864 2.38638 8.85911 3.06364 7.50914Z"></path>
+                </svg>
+              </div>
+            </div>
+          </>
+        )}
+        {/* <--- Vault Code ---> */}
       </div>
     </div>
   );
