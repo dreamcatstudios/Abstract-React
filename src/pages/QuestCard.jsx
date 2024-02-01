@@ -704,7 +704,7 @@ const QuestCard = () => {
                     </a>
                   ) : (
                     <Link
-                      to={`/${questData[name].fileDownload}`}
+                      to={questData[name].fileDownload}
                       onClick={onDownloadClick}
                       className="px-5 py-4 bg-white text-black hover:bg-black hover:border-white hover:border hover:text-white hover:bg-transparent hover:transition-all hover:delay-50 hover:ease-in-out"
                     >
