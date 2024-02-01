@@ -14,6 +14,7 @@ const QuestCard = () => {
   const [questData, setQuestData] = useState({
     alex_01: {
       img: "/location.jpg",
+      downloadable: true,
       title: "Alex_File01 - Report",
       fileName: "Location_data.csv",
       points: 0,
@@ -68,6 +69,7 @@ const QuestCard = () => {
     },
     grace_02: {
       img: "/medical.jpg",
+      downloadable: true,
       title: "Grace_File02 - Report",
       fileName: "Medical_data.csv",
       fileDownload: "/medical_data.csv",
@@ -125,6 +127,7 @@ const QuestCard = () => {
     },
     ethan_03: {
       img: "/search.jpg",
+      downloadable: true,
       title: "Ethan_File03 - Report",
       fileName: "Search_data.csv",
       points: 0,
@@ -178,6 +181,7 @@ const QuestCard = () => {
     },
     deepfake_04: {
       img: "/deepfake.jpg",
+      downloadable: true,
       title: "Deepafake - Dataset",
       fileName: "Deepfake_data.csv",
       points: 0,
@@ -230,6 +234,7 @@ const QuestCard = () => {
     },
     samuel_05: {
       img: "/creditCard.jpg",
+      downloadable: true,
       title: "Samuel_File05 - Report",
       fileName: "Credit_Transactions.csv",
       points: 0,
@@ -288,6 +293,7 @@ const QuestCard = () => {
     },
     aurora_06: {
       img: "/charity.jpg",
+      downloadable: true,
       title: "Aurora_File05 - Report",
       fileName: "Fitness.jpg",
       points: 0,
@@ -340,10 +346,11 @@ const QuestCard = () => {
     },
     natalie_07: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      downloadable: false,
       title: "Natalie_File07 - Report",
       fileName: "Mobile_app_usage",
       points: 0,
-      fileDownload: "mobile/appUsage",
+      fileDownload: "/mobile/appUsage",
       downloadTag: "Natalie Phone - Checkout",
       description:
         "Natalie experienced a distressing leak of her app usage data, drawing attention to questionable data collection practices and weak privacy protections prevalent in today's digital landscape.",
@@ -394,10 +401,11 @@ const QuestCard = () => {
     },
     surbhi_08: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      downloadable: false,
       title: "Surbhi_File08 - Report",
       fileName: "Vault",
       points: 0,
-      fileDownload: "mobile/social",
+      fileDownload: "/mobile/social",
       downloadTag: "Surbhi Data - Download",
       description:
         "People increasingly share personal info online, enabling data brokers and internet firms to track and target them.",
@@ -446,7 +454,9 @@ const QuestCard = () => {
     },
     jim_09: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      downloadable: true,
       title: "Jim_File09 - Report",
+
       fileName: "Online_poll.csv",
       points: 0,
       fileDownload: "",
@@ -500,6 +510,7 @@ const QuestCard = () => {
     },
     adam_10: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
+      downloadable: true,
       title: "Adam_File05 - Report",
       fileName: "Job_application.csv",
       points: 0,
@@ -683,13 +694,23 @@ const QuestCard = () => {
               <div className="flex flex-col gap-4">
                 <h1>{questData[name].downloadTag}</h1>
                 <div className="mb-2 sm:mb-0">
-                  <a
-                    onClick={onDownloadClick}
-                    href={questData[name].fileDownload}
-                    className="px-5 py-4  bg-white text-black hover:bg-black hover:border-white hover:border hover:text-white hover:bg-transparent hover:transition-all hover:delay-50 hover:ease-in-out"
-                  >
-                    {questData[name].fileName}
-                  </a>
+                  {questData[name].downloadable ? (
+                    <a
+                      onClick={onDownloadClick}
+                      href={questData[name].fileDownload}
+                      className="px-5 py-4  bg-white text-black hover:bg-black hover:border-white hover:border hover:text-white hover:bg-transparent hover:transition-all hover:delay-50 hover:ease-in-out"
+                    >
+                      {questData[name].fileName}
+                    </a>
+                  ) : (
+                    <Link
+                      to={questData[name].fileDownload}
+                      onClick={onDownloadClick}
+                      className="px-5 py-4 bg-white text-black hover:bg-black hover:border-white hover:border hover:text-white hover:bg-transparent hover:transition-all hover:delay-50 hover:ease-in-out"
+                    >
+                      {questData[name].fileName}
+                    </Link>
+                  )}
                 </div>
               </div>
               {selectedQuest.learningPath.map((item, index) => (
