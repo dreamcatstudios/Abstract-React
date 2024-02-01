@@ -343,7 +343,7 @@ const QuestCard = () => {
       title: "Natalie_File07 - Report",
       fileName: "Mobile_app_usage",
       points: 0,
-      fileDownload: "/mobile/appUsage",
+      fileDownload: "https://abstract-react.vercel.app/mobile/appUsage",
       downloadTag: "Natalie Phone - Checkout",
       description:
         "Natalie experienced a distressing leak of her app usage data, drawing attention to questionable data collection practices and weak privacy protections prevalent in today's digital landscape.",
@@ -397,7 +397,7 @@ const QuestCard = () => {
       title: "Surbhi_File08 - Report",
       fileName: "Vault",
       points: 0,
-      fileDownload: "/mobile/social",
+      fileDownload: "https://abstract-react.vercel.app/mobile/social",
       downloadTag: "Surbhi Data - Download",
       description:
         "People increasingly share personal info online, enabling data brokers and internet firms to track and target them.",
