@@ -1,5 +1,5 @@
 // MobileLayout Component
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Homescreen from "./miniapps/Homescreen";
 import { popApp } from "./store/MobileStore";
@@ -7,9 +7,11 @@ import Settings from "./miniapps/Settings";
 import Gallery from "./miniapps/Gallery";
 import Messaging from "./miniapps/Messaging";
 import Activities from "./miniapps/Activities";
+import { useParams } from "react-router-dom";
 
 const MobileLayout = () => {
   const dispatch = useDispatch();
+
   const screen = useSelector((state) => {
     if (state.appState.appNames.length === 1) {
       return <Homescreen />;
@@ -30,6 +32,7 @@ const MobileLayout = () => {
       }
     }
   });
+
 
   const onBackClick = () => {
     console.log("clicked");

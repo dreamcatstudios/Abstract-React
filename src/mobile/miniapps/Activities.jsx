@@ -124,7 +124,7 @@ const Activities = () => {
           <div className="w-full bg-white h-18 rounded-md shadow-md ">
             <div className="flex justify-between items-center h-full">
               <div className="flex justify-center items-center h-full w-1/3 p-5">
-                <img className="w-full h-full " src="/public/mobile/CNN.png" />
+                <img className="w-full h-full " src="/mobile/CNN.png" />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
                 <h1 className="text-black text-lg font-bold">CNN</h1>
@@ -142,7 +142,7 @@ const Activities = () => {
               <div className="flex justify-center items-center h-full w-1/3 p-5">
                 <img
                   className="w-full h-full "
-                  src="/public/mobile/Tinder.png"
+                  src="/mobile/Tinder.png"
                 />
               </div>
               <div className="flex flex-col justify-center items-start h-full w-2/3">
