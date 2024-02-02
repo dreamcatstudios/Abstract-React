@@ -49,10 +49,48 @@ const Instapost = () => {
       caption: "Now this was a fun day with friends!! 🤠 #friendsforever",
       timePosted: "10-01-2024",
     },
+    {
+      id: 4,
+      username: "sokhushyy_",
+      alt: "Image of a trendy street art",
+      userImage:
+        "https://cdn.pixabay.com/photo/2023/07/28/15/14/wall-8155414_1280.jpg",
+      postImage:
+        "https://cdn.pixabay.com/photo/2023/03/29/16/53/street-art-7885965_1280.jpg",
+      likes: 120,
+      location: "Urban Jungle",
+      caption: "Exploring the city vibes and street art! 🌆✨ #CityExplorer",
+      timePosted: "2 hours ago",
+    },
+    {
+      id: 5,
+      username: "sokhushyy_",
+      alt: "Image of a gaming setup",
+      userImage: "https://placekitten.com/500/500",
+      postImage:
+        "https://cdn.pixabay.com/photo/2021/03/17/14/39/gaming-6102500_1280.jpg",
+      likes: 180,
+      location: "Gamer's Paradise",
+      caption: "Gaming all day, every day! 🎮🕹️ #GamerLife",
+      timePosted: "1 day ago",
+    },
+    {
+      id: 6,
+      username: "sokhushyy_",
+      alt: "Image of a vibrant sunset",
+      userImage: "https://placekitten.com/500/500",
+      postImage:
+        "https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080_1280.jpg",
+      likes: 250,
+      location: "Chasing Sunsets",
+      caption:
+        "Sunsets are proof that no matter what happens, every day can end beautifully. 🌅 #SunsetChaser",
+      timePosted: "3 days ago",
+    },
   ];
 
   return (
-    <div className="flex rounded-md flex-col justify-center items-center relative h-full bg-black ">
+    <div className="flex rounded-md flex-col justify-center items-center relative h-full bg-black pb-3">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
         <h1 className="text-white">{time.slice(0, time.lastIndexOf(":"))}</h1>
@@ -122,7 +160,7 @@ const Instapost = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 p-2 h-full">
+          <div className="flex flex-col gap-2 p-2 h-full ">
             {/* Main Content */}
             {posts.map((post) => (
               <div className="flex" key={post.id}>

@@ -457,7 +457,7 @@ const QuestCard = () => {
       downloadable: true,
       title: "Jim_File09 - Report",
 
-      fileName: "Online_poll.csv",
+      fileName: "Smart_Home.csv",
       points: 0,
       fileDownload: "",
 
@@ -669,9 +669,9 @@ const QuestCard = () => {
 
   return (
     <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] h-full w-full">
-      <div className="h-full container flex flex-col justify-center items-center">
+      <div className="h-full w-full container flex flex-col justify-center items-center">
         <ToastContainer />
-        <div className="w-full h-[100%] flex flex-col justify-between ">
+        <div className="w-full h-full flex flex-col justify-between ">
           <div className="border border-[#fafafa] p-5 mt-5 mb-5">
             <div className="flex-col">
               <img
