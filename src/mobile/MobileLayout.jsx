@@ -46,6 +46,7 @@ const MobileLayout = () => {
   };
 
   useEffect(() => {
+    dispatch(popApp());
     console.log("param:", level);
   }, []);
   return (

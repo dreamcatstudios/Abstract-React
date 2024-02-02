@@ -52,6 +52,7 @@ const Homepage = () => {
 
   useEffect(() => {
     const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
+    
 
     if (hasVisitedBefore) {
       // User has visited before, so set loading to false immediately
