@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import PieChart from "../components/PieChart";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -8,8 +7,10 @@ const QuestCard = () => {
   const [userAnswer, setUserAnswer] = useState("");
   const [totalPoints, setTotalPoints] = useState(0);
   const [maxPoints, setMaxPoints] = useState(0);
-  const [showChart, setShowChart] = useState(false);
+
+  const [questionStatus, setQuestionStatus] = useState({});
   const { name } = useParams();
+  const navigate = useNavigate();
 
   const [questData, setQuestData] = useState({
     alex_01: {
@@ -30,6 +31,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[Wisconssin,Texas,Caliornia]",
         },
         {
@@ -38,6 +40,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[Engineering, Medicine, Accounting]",
         },
         {
@@ -46,6 +49,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[yes, no, can't say]",
         },
         {
@@ -54,6 +58,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[yes, no, can't say]",
         },
         {
@@ -63,6 +68,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[Judaism, Christianity, Islam]",
         },
       ],
@@ -85,6 +91,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[Yes, No, Cannot Say]",
         },
         {
@@ -94,6 +101,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[Male, Female, cannot say]",
         },
         {
@@ -103,6 +111,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options:
             "[Mid-twenties to early thirties, Mid-thirties to forties, Mid-forties to fifties]",
         },
@@ -112,6 +121,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[yes, can't say, no]",
         },
         {
@@ -121,6 +131,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[Over 175 cm, Between 160-175 cm, can't say]",
         },
       ],
@@ -142,6 +153,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[Yes, Can't say, No]",
         },
         {
@@ -150,6 +162,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[Rugby, Football, Basketball]",
         },
         {
@@ -158,6 +171,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[Erling Haaland, Cristiano Ronaldo, Lionel Messi]",
         },
         {
@@ -167,6 +181,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[Capitalism, Socialism, Communism]",
         },
         {
@@ -175,6 +190,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[ Engineering, Journalism, Psychology]",
         },
       ],
@@ -196,6 +212,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -204,6 +221,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -212,6 +230,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -220,6 +239,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -228,6 +248,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
       ],
@@ -250,6 +271,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[groceries, unable to determine, or entertainment.]",
         },
         {
@@ -259,6 +281,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[vegan, non-vegetarian, or unknown.]",
         },
         {
@@ -268,6 +291,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options:
             "[moved, uncertain, or not having recently changed residences]",
         },
@@ -278,6 +302,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[good, poor, or cannot say.]",
         },
         {
@@ -287,6 +312,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[alone, undecipherable, or cohabiting with family members]",
         },
       ],
@@ -308,6 +334,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[early bird,can't tell,late riser]",
         },
         {
@@ -316,6 +343,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[athletic,can't tell,unfit]",
         },
         {
@@ -324,6 +352,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[office,can't tell,physical activity]",
         },
         {
@@ -332,6 +361,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[rather young,can't tell,rather old]",
         },
         {
@@ -340,6 +370,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[lazy,can't tell,busy]",
         },
       ],
@@ -361,6 +392,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options:
             "[politically engaged, mainstream media consumer, alternative sources]",
         },
@@ -368,6 +400,7 @@ const QuestCard = () => {
           level: 2,
           title: "What do we know about Natalie's language proficiency?",
           answer: "test2",
+          explanation: "This is because of this",
           clicked: false,
           disabled: false,
           options: "[multilingual, bilingual, monolingual]",
@@ -378,6 +411,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[frequent user, moderate user, seldom user]",
         },
         {
@@ -386,6 +420,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options:
             "[smartphone addict, computer reliant, minimalistic approach]",
         },
@@ -395,6 +430,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[single, married, can't tell]",
         },
       ],
@@ -416,51 +452,18 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "",
         },
-        // {
-        //   level: 2,
-        //   title: "What was Khushy previous salary at her old work?",
-        //   answer: "test2",
-        //   clicked: false,
-        //   disabled: false,
-        //   options: "[1,2,3]",
-        // },
-        // {
-        //   level: 3,
-        //   title:
-        //     "Which city did Khushy work in before moving to the current location?",
-        //   clicked: false,
-        //   disabled: false,
-        //   answer: "test3",
-        //   options: "[1,2,3]",
-        // },
-        // {
-        //   level: 4,
-        //   title: "What is Khushy's dream job?",
-        //   clicked: false,
-        //   answer: "test4",
-        //   options: "[1,2,3]",
-        // },
-        // {
-        //   level: 5,
-        //   title: "Does Khushy own any pets?",
-        //   clicked: false,
-        //   disabled: false,
-        //   answer: "test5",
-        //   options: "[1,2,3]",
-        // },
       ],
     },
     jim_09: {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       downloadable: true,
       title: "Jim_File09 - Report",
-
       fileName: "Smart_Home.csv",
       points: 0,
       fileDownload: "",
-
       downloadTag: "Jim Data - Download",
       description:
         "Here's some data that we managed to collect on Jim. Identify the data and help the AI algorithm determine Jim's social credit score.",
@@ -471,6 +474,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -479,6 +483,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test2",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -488,6 +493,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -496,6 +502,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -504,6 +511,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
       ],
@@ -525,12 +533,14 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
           level: 2,
           title: "Is Khushy a vegetarian or a non-vegetarian?",
           answer: "test2",
+          explanation: "This is because of this",
           clicked: false,
           disabled: false,
           options: "[1,2,3]",
@@ -542,6 +552,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test3",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -550,6 +561,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test4",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
         {
@@ -558,6 +570,7 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "test5",
+          explanation: "This is because of this",
           options: "[1,2,3]",
         },
       ],
@@ -591,15 +604,23 @@ const QuestCard = () => {
   const onAnswerSubmit = (index) => {
     const correctAnswer = selectedQuest.learningPath[index].answer;
     const currentQuest = questData[name.toLowerCase()];
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 250);
-    toast.success("Answer Submitted");
 
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    // Check if the question is already answered
+    if (questionStatus[index] !== undefined) {
+      toast.error("You have already answered this question.");
+      return;
+    }
+
+    const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+
+    setQuestionStatus((prev) => ({
+      ...prev,
+      [index]: isCorrect,
+    }));
+
+    toast.success(isCorrect ? "Answer Submitted!!" : "Answer Submitted!!");
+
+    if (isCorrect) {
       const updatedPoints = currentQuest.points + 1;
       setQuestData((prevState) => ({
         ...prevState,
@@ -611,8 +632,6 @@ const QuestCard = () => {
           ),
         },
       }));
-
-      //Pushing answers to array
 
       // Update totalPoints state
       setTotalPoints((prevTotalPoints) => prevTotalPoints + 1);
@@ -634,38 +653,39 @@ const QuestCard = () => {
     toast.success("File Downloaded! Check your downloads folder");
   };
 
-  const onCheckAnswer = (index) => {
-    const correctAnswer = selectedQuest.learningPath[index].answer;
-    const currentQuest = questData[name.toLowerCase()];
+  const finishData = () => {
+    // Check if all questions are answered
+    const answeredQuestions = Object.keys(questionStatus).map(Number);
 
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-      toast.success("Correct Answer");
+    if (answeredQuestions.length === selectedQuest.learningPath.length) {
+      // Calculate maxPoints
+      const maxPoints = selectedQuest.learningPath.length;
+      setMaxPoints(maxPoints);
+
+      // Extract correct and incorrect indices
+      const correctIndices = answeredQuestions.filter(
+        (index) => questionStatus[index]
+      );
+      const incorrectIndices = answeredQuestions.filter(
+        (index) => !questionStatus[index]
+      );
+
+      // Send data to Scores component
+      const dataToSend = {
+        correct: correctIndices,
+        incorrect: incorrectIndices,
+        questions: selectedQuest.learningPath.map((item) => item.title),
+        explanation: selectedQuest.learningPath.map((item, index) =>
+          questionStatus[index] ? "" : item.explanation
+        ),
+      };
+
+      // Use history object to navigate and send data as state
+      navigate("/scores", { state: { data: dataToSend } });
     } else {
-      toast.error("Wrong Answer");
+      toast.error("Please answer all questions before finishing.");
     }
   };
-
-  const finishData = () => {
-    console.log("questData", questData[name.toLowerCase()]);
-    console.log("Total Points:", totalPoints);
-
-    // Calculate maxPoints
-    const maxPoints = selectedQuest.learningPath.length;
-    setMaxPoints(maxPoints);
-    setShowChart(!showChart);
-    // Delay for 0.5 seconds before scrolling to the botNatalie of the page
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
-      });
-    }, 250);
-  };
-
-  const pieChartData = [
-    { value: totalPoints },
-    { value: maxPoints - totalPoints },
-  ];
 
   return (
     <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] h-full w-full">
@@ -788,16 +808,6 @@ const QuestCard = () => {
             Finish
           </button>
         </div>
-        {/*<--- Chart Component ---> */}
-        {showChart && (
-          <div className="w-full flex flex-col items-center justify-center pt-10 pb-10 mb-10  border border-[#fafafa]">
-            <h1 className="text-5xl text-center  pb-5 font-bold">Your Score</h1>
-            <PieChart width={400} height={400} data={pieChartData} />
-            <h1 className="text-5xl text-center mt-10 font-bold">{`Total Points: ${totalPoints} / ${maxPoints}`}</h1>
-          </div>
-        )}
-
-        {/*<--- Chart Component ---> */}
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import { mobileStore } from "./mobile/store/MobileStore";
 import Splash from "./pages/Splash";
 import ChatBot from "./components/ChatBot";
 import { ToastContainer } from "react-toastify";
+import Scores from "./pages/Scores";
 
 const App = () => {
   const [showChatbot, setShowChatbot] = useState(false);
@@ -40,7 +41,6 @@ const App = () => {
     <Provider store={mobileStore}>
       <Router>
         <div className="bg-[url('/bg.jpg')] bg-no-repeat bg-cover opacity-[100%]  saturate-50  text-white min-h-screen">
-
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -48,6 +48,7 @@ const App = () => {
             <Route path="/points" element={<Points />} />
             <Route path="/mobile/:level" element={<Mobile />} />
             <Route path="/file/:name" element={<QuestCard />} />
+            <Route path="/scores" element={<Scores />} />
             <Route path="quest/:difficulty/:number" element={<Question />} />
             {/* Add more routes for different pages if needed */}
           </Routes>
