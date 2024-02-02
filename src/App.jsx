@@ -2,18 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
-
 import "./App.css";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import QuestCard from "./pages/QuestCard";
-import Question from "./pages/Question";
 import Points from "./pages/Points";
 import Mobile from "./mobile/MobileLayout";
 import { mobileStore } from "./mobile/store/MobileStore";
-import Splash from "./pages/Splash";
 import ChatBot from "./components/ChatBot";
-import { ToastContainer } from "react-toastify";
 import Scores from "./pages/Scores";
 
 const App = () => {
@@ -44,12 +40,11 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/splash" element={<Splash />} />
+
             <Route path="/points" element={<Points />} />
             <Route path="/mobile/:level" element={<Mobile />} />
             <Route path="/file/:name" element={<QuestCard />} />
             <Route path="/scores" element={<Scores />} />
-            <Route path="quest/:difficulty/:number" element={<Question />} />
             {/* Add more routes for different pages if needed */}
           </Routes>
         </div>
