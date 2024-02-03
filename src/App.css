@@ -1,19 +1,19 @@
 /* Add this at the top of your CSS file or in a separate file */
 @font-face {
   font-family: "Giest";
-  src: url("/Giest-Black.otf") format("opentype");
+  src: url("/fonts/Geist-Light.woff2") format("woff2");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Giest";
-  src: url("/Giest-Bold.otf") format("opentype");
+  src: url("/fonts/Geist-Bold.woff2") format("woff2");
   font-weight: 700; /* Use the correct weight for bold, typically 700 */
 }
 
 @font-face {
   font-family: "Giest";
-  src: url("/Giest-Light.otf") format("opentype");
+  src: url("/fonts/Geist-Regular.woff2") format("woff2");
   font-weight: 300;
 }
 

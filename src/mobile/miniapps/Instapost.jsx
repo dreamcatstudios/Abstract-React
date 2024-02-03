@@ -33,7 +33,7 @@ const Instapost = () => {
       postImage:
         "https://cdn.pixabay.com/photo/2022/12/20/11/49/fall-7667684_1280.jpg", // Replace with your image URL
       likes: 200,
-      location: "Wisconssin",
+      location: "California",
       caption: "My Milo is the cutest cat in the world!! 😍 #catlover",
       timePosted: "10-01-2024",
     },
@@ -45,7 +45,7 @@ const Instapost = () => {
       postImage:
         "https://cdn.pixabay.com/photo/2019/09/08/20/48/friends-4461896_1280.jpg", // Replace with your image URL
       likes: 200,
-      location: "Wisconssin",
+      location: "California",
       caption: "Now this was a fun day with friends!! 🤠 #friendsforever",
       timePosted: "10-01-2024",
     },

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Pie } from "@visx/shape";
 import { Group } from "@visx/group";
+import { Text } from "@visx/text";
 
 const Scores = () => {
   const location = useLocation();
@@ -22,14 +23,14 @@ const Scores = () => {
   const incorrectPercentage = (incorrect.length / totalQuestions) * 100;
 
   const data = [
-    { label: "Correct", value: correctPercentage },
-    { label: "Incorrect", value: incorrectPercentage },
+    { label: "Correct", value: correctPercentage, color: "#0033ad" },
+    { label: "Incorrect", value: incorrectPercentage, color: "#F7931A" },
   ];
 
-  const colorScale = ["#4CAF50", "#FF5252"];
-  const width = Math.min(300, window.innerWidth - 20);
-  const height = Math.min(300, window.innerWidth - 20);
-  const radius = Math.min(width, height) / 2;
+  const width = 400;
+  const half = width / 2;
+  const radius = half - 20; // Adjusted for the effect similar to Coins component
+  const [active, setActive] = useState(null);
 
   return (
     <div className="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] min-h-screen h-full first:w-full">
@@ -94,25 +95,76 @@ const Scores = () => {
               <div className="flex flex-col justify-center items-center mt-5 border border-[#fafafa] p-4">
                 <h1 className="text-2xl font-bold">Score - Chart</h1>
                 {totalQuestions > 0 ? (
-                  <svg width={width} height={height}>
-                    <Group top={height / 2} left={width / 2}>
+                  <svg width={width} height={width}>
+                    <Group top={half} left={half}>
                       <Pie
                         data={data}
                         pieValue={(d) => d.value}
                         outerRadius={radius}
                         innerRadius={0}
-                        fill={(d) => colorScale[d.index]}
-                      />
+                        padAngle={0.01}
+                      >
+                        {(pie) => {
+                          return pie.arcs.map((arc) => (
+                            <g
+                              key={arc.data.label}
+                              onMouseEnter={() => setActive(arc.data)}
+                              onMouseLeave={() => setActive(null)}
+                            >
+                              <path
+                                d={pie.path(arc)}
+                                fill={arc.data.color}
+                              ></path>
+                            </g>
+                          ));
+                        }}
+                      </Pie>
+
+                      {active ? (
+                        <>
+                          <Text
+                            textAnchor="middle"
+                            fill="#fff"
+                            fontSize={40}
+                            dy={-20}
+                          >
+                            {`${Math.floor(active.value)}%`}
+                          </Text>
+
+                          <Text
+                            textAnchor="middle"
+                            fill="#fff"
+                            fontSize={20}
+                            dy={20}
+                          >
+                            {`${active.label}`}
+                          </Text>
+                        </>
+                      ) : (
+                        <>
+                          <Text
+                            textAnchor="middle"
+                            fill="#fff"
+                            fontSize={40}
+                            dy={-20}
+                          >
+                            {`${Math.floor(correctPercentage)}%`}
+                          </Text>
+
+                          <Text
+                            textAnchor="middle"
+                            fill="#fff"
+                            fontSize={20}
+                            dy={20}
+                          >
+                            {`${totalQuestions} Questions`}
+                          </Text>
+                        </>
+                      )}
                     </Group>
                   </svg>
                 ) : (
                   <p className="text-white">No questions answered</p>
-                )}
-
-                {totalQuestions === correct.length && totalQuestions > 0 && (
-                  <p className="text-green-500 text-lg mt-4">
-                    Congratulations! All answers are correct.
-                  </p>
                 )}
               </div>
             </div>
