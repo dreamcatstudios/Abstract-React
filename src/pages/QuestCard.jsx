@@ -601,11 +601,28 @@ const QuestCard = () => {
     e.stopPropagation();
   };
 
+  useEffect(() => {
+    const storedQuestionStatus = localStorage.getItem(
+      `${name.toLowerCase()}_question_status`
+    );
+
+    setQuestionStatus((prevQuestionStatus) => ({
+      ...prevQuestionStatus,
+      ...(storedQuestionStatus ? JSON.parse(storedQuestionStatus) : {}),
+    }));
+  }, [name]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      `${name.toLowerCase()}_question_status`,
+      JSON.stringify(questionStatus)
+    );
+  }, [name, questionStatus]);
+
   const onAnswerSubmit = (index) => {
     const correctAnswer = selectedQuest.learningPath[index].answer;
     const currentQuest = questData[name.toLowerCase()];
 
-    // Check if the question is already answered
     if (questionStatus[index] !== undefined) {
       toast.error("You have already answered this question.");
       return;
@@ -633,7 +650,6 @@ const QuestCard = () => {
         },
       }));
 
-      // Update totalPoints state
       setTotalPoints((prevTotalPoints) => prevTotalPoints + 1);
     } else {
       setQuestData((prevState) => ({
@@ -735,66 +751,68 @@ const QuestCard = () => {
               </div>
               {selectedQuest.learningPath.map((item, index) => (
                 <div className="flex flex-col gap-3 w-full" key={item.level}>
-                  {item.disabled ? (
+                  {questionStatus[index] === undefined ? (
+                    item.disabled ? (
+                      <div className="bg-gray-800  items-center p-5 mt-2 rounded-sm flex-col">
+                        <p className="text-white">{`${item.level} - This item has already been answered`}</p>
+                        {/* You can display a message or any other content for disabled items */}
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() => onClickExpand(index)}
+                        className="bg-gray-800 items-center p-5 mt-1 sm:mt-3 rounded-sm flex-col"
+                      >
+                        <div className="flex justify-between">
+                          <p className="text-white">{`${item.level} - ${item.title}`}</p>
+                          {item.clicked ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              width={"1.2rem"}
+                              height={"1.2rem"}
+                            >
+                              <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                            </svg>
+                          ) : (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              width={"1.2rem"}
+                              height={"1.2rem"}
+                            >
+                              <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                            </svg>
+                          )}
+                        </div>
+
+                        {item.clicked && (
+                          <>
+                            <p>{item.options}</p>
+                            <div className="flex gap-3 items-center flex-col sm:flex-row align-middle mt-2">
+                              <input
+                                onChange={(e) => setUserAnswer(e.target.value)}
+                                onClick={onInputClick}
+                                placeholder="Type your answer"
+                                className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
+                              />
+
+                              <button
+                                onClick={() => onAnswerSubmit(index)}
+                                className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
+                              >
+                                Submit
+                              </button>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    )
+                  ) : (
                     <div className="bg-gray-800  items-center p-5 mt-2 rounded-sm flex-col">
                       <p className="text-white">{`${item.level} - This item has already been answered`}</p>
                       {/* You can display a message or any other content for disabled items */}
-                    </div>
-                  ) : (
-                    <div
-                      onClick={() => onClickExpand(index)}
-                      className="bg-gray-800 items-center p-5 mt-1 sm:mt-3 rounded-sm flex-col"
-                    >
-                      <div className="flex justify-between">
-                        <p className="text-white">{`${item.level} - ${item.title}`}</p>
-                        {item.clicked ? (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            width={"1.2rem"}
-                            height={"1.2rem"}
-                          >
-                            <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-                          </svg>
-                        ) : (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            width={"1.2rem"}
-                            height={"1.2rem"}
-                          >
-                            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
-                          </svg>
-                        )}
-                      </div>
-
-                      {item.clicked && (
-                        <>
-                          <p>{item.options}</p>
-                          <div className="flex gap-3 items-center flex-col sm:flex-row align-middle mt-2">
-                            <input
-                              onChange={(e) => setUserAnswer(e.target.value)}
-                              onClick={onInputClick}
-                              placeholder="Type your answer"
-                              className="h-5 p-5 pb-5 pl-2 w-full sm:w-auto  hover:transition-all hover:duration-75 hover:ease-in-out text-black rounded-sm"
-                            />
-                            {/* <button
-                            onClick={() => onCheckAnswer(index)}
-                            className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
-                          >
-                            Check
-                          </button> */}
-                            <button
-                              onClick={() => onAnswerSubmit(index)}
-                              className="px-3 py-2 w-full sm:w-auto bg-black rounded text-white"
-                            >
-                              Submit
-                            </button>
-                          </div>
-                        </>
-                      )}
                     </div>
                   )}
                 </div>
