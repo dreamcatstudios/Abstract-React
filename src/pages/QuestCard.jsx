@@ -535,7 +535,7 @@ const QuestCard = () => {
           disabled: false,
           answer: "1",
           explanation: "This is because of the following reasons",
-          options: ["TWS", "Other", "Not sure"],
+          options: "[TWS,Other,Not sure]",
         },
         {
           level: 2,
@@ -544,7 +544,7 @@ const QuestCard = () => {
           explanation: "This is because of the following reasons",
           clicked: false,
           disabled: false,
-          options: ["Under $200", "Over $200", "Can't tell"],
+          options: "[Under $200,Over $200, Can't tell]",
         },
         {
           level: 3,
@@ -553,7 +553,7 @@ const QuestCard = () => {
           disabled: false,
           answer: "test3",
           explanation: "This is because of the following reasons",
-          options: ["Yes", "No", "Can't tell"],
+          options: "[Yes, No, Can't tell]",
         },
         {
           level: 4,
@@ -563,7 +563,7 @@ const QuestCard = () => {
           disabled: false,
           answer: "test4",
           explanation: "This is because of the following reasons",
-          options: ["He bought one", "He didn't buy", "Can't tell"],
+          options: "[He bought one, He didn't buy, Can't tell]",
         },
         {
           level: 5,
@@ -572,7 +572,7 @@ const QuestCard = () => {
           disabled: false,
           answer: "test5",
           explanation: "This is because of the following reasons",
-          options: ["Frequently", "Occasionally", "Rarely"],
+          options: "[Frequently,Occasionally,Rarely]",
         },
       ],
     },
