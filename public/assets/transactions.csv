@@ -13,11 +13,11 @@ Date,Time,Merchant Category,Amount,Tender Type,Payment Status,Credit Limit,Balan
 "Jan 30, 2023",1:00 PM,Uber Eats,$34.00,Credit,Paid On Time,"$5,000.00",$290.00
 "Jan 30, 2023",2:00 PM,Baskin Robbins,$23.00,Credit,Paid On Time,"$5,000.00",$290.00
 "Jan 30, 2023",3:00 PM,Wendy's,$47.00,Credit,Paid Late,"$5,000.00",$290.00
-"Jan 1, 2023",12:00 PM,Rent Payments,"$1,200.00",Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,Netflix,$22.99,Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,Verizon,$18.99,Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,X-Box Game Pass,$1.99,Credit,Paid On Time,"$5,000.00",$0.00
 "Feb 1, 2023",1:00 PM,Amazon,$41.00,Credit,Paid On Time,"$5,000.00",$0.00
+"Feb 1, 2023",12:00 PM,Rent Payments,"$1,000.00",Credit,Paid On Time,"$5,000.00",$0.00
 "Feb 1, 2023",2:00 PM,Uber Eats,$41.00,Credit,Paid On Time,"$5,000.00",$0.00
 "Feb 2, 2023",1:00 PM,Walmart,$45.00,Credit,Paid Late,"$5,000.00",$10.00
 "Feb 4, 2023",1:00 PM,Gas,$15.00,Credit,Paid On Time,"$5,000.00",$30.00
@@ -41,7 +41,6 @@ Date,Time,Merchant Category,Amount,Tender Type,Payment Status,Credit Limit,Balan
 "Feb 13, 2023",5:00 PM,DoorDash,$55.00,Credit,Paid On Time,"$5,000.00",$120.00
 "Feb 14, 2023",1:00 PM,Lyft,$29.00,Credit,Paid On Time,"$5,000.00",$130.00
 "Feb 20, 2023",1:00 PM,DoorDash,$23.00,Credit,Paid On Time,"$5,000.00",$190.00
-"Jan 1, 2023",12:00 PM,Rent Payments,"$1,200.00",Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,Netflix,$22.99,Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,Verizon,$18.99,Credit,Paid On Time,"$5,000.00",$0.00
 "Jan 1, 2023",12:00 PM,X-Box Game Pass,$1.99,Credit,Paid On Time,"$5,000.00",$0.00

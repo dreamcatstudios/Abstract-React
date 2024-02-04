@@ -264,64 +264,70 @@ const QuestCard = () => {
     samuel_05: {
       img: "/creditCard.jpg",
       downloadable: true,
-      title: "Samuel_File05 - Report",
+      title: "Samuel File05 - Report",
       fileName: "Credit_Transactions.csv",
       points: 0,
       fileDownload: "/transactions.csv",
       downloadTag: "Samuel Data - Download",
       description:
-        "Samuel fell victim to a credit transaction data leak, an unsettling reminder of the vulnerabilities surrounding financial data security as more businesses digitize payment systems while failing to implement adequate safeguards against cyber attacks.",
+        "A credit transaction data leak has affected Samuel, highlighting concerns around financial data security as businesses adopt digital payments without implementing robust cyber attack defenses.",
       learningPath: [
         {
           level: 1,
-          title:
-            "Regarding this person's typical acquisitions, what do we know?",
+          title: "What do we know about this person's usual purchases?",
           clicked: false,
           disabled: false,
-          answer: "1",
-          explanation: "This is because of this",
-          options: "[groceries, unable to determine, or entertainment.]",
+          answer: "3",
+          explanation:
+            "He has spent a total of $128.00 on groceries and $369.99 on entertainment.",
+          options: ["Groceries", "Unable to determine", "Entertainment"],
         },
         {
           level: 2,
           title:
-            "According to the data, what can we infer about this individual's preferences concerning dietary habits?",
+            "What can we infer about this individual's dietary preferences from the data?",
           clicked: false,
           disabled: false,
-          answer: "test2",
-          explanation: "This is because of this",
-          options: "[vegan, non-vegetarian, or unknown.]",
+          answer: "3",
+          explanation:
+            "Expenses include fast food (Wendy's, McDonald's, Popeyes), dessert places (Baskin Robbins), and grocery stores. The exact food items aren't specified, making it challenging to definitively classify their dietary preference as vegan, non-vegetarian, or otherwise.",
+          options: ["Vegan", "Non-vegetarian", "Can't tell"],
         },
         {
           level: 3,
-          title:
-            "Concerning this person's relocation history, what do we know? ",
+          title: "What do we know about this person's relocation history?",
           clicked: false,
           disabled: false,
-          answer: "test3",
-          explanation: "This is because of this",
-          options:
-            "[moved, uncertain, or not having recently changed residences]",
+          answer: "1",
+          explanation:
+            "We observe fluctuations in rental payments, suggesting that they may have moved at some point.",
+          options: ["Moved", "Uncertain", "Not recently changed residences"],
         },
         {
           level: 4,
           title:
-            "How would you describe this person's existing fiscal situation?",
+            "How would you describe this person's current financial status?",
           clicked: false,
           disabled: false,
-          answer: "test4",
-          explanation: "This is because of this",
-          options: "[good, poor, or cannot say.]",
+          answer: "2",
+          explanation:
+            "Increasing credit card debt coupled with a low credit score indicates a financially precarious position.",
+          options: ["Good", "Poor", "Cannot say."],
         },
         {
           level: 5,
           title:
-            "As for the number of individuals residing in this person's household, what do we understand?",
+            "Based on available data, how many people live in this person's household?",
           clicked: false,
           disabled: false,
-          answer: "test5",
-          explanation: "This is because of this",
-          options: "[alone, undecipherable, or cohabiting with family members]",
+          answer: "2",
+          explanation:
+            "There is no relevant information provided regarding the number of residents in the household within the dataset.",
+          options: [
+            "Lives alone",
+            "Undecipherable",
+            "Cohabits with family members",
+          ],
         },
       ],
     },
