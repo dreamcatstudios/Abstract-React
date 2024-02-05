@@ -6,44 +6,44 @@ import { FadeLoader } from "react-spinners";
 const Homepage = () => {
   const levels = [
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       level: "1",
       title: "Alex_01",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Grace_02",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Ethan_03",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Deepfake_04",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Samuel_05",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Aurora_06",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Natalie_07",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Surbhi_08",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Jim_09",
     },
     {
-      bg: "/folder.png",
+      bg: "/assets/folder.png",
       title: "Adam_10",
     },
   ];
@@ -76,7 +76,7 @@ const Homepage = () => {
 
   return (
     <div
-      style={{ backgroundImage: `url("/Garuda Totem.jpg")` }}
+      style={{ backgroundImage: `url("/assets/Garuda Totem.jpg")` }}
       className="flex flex-col h-screen  brightness-75 bg-cover container"
     >
       {loading && (

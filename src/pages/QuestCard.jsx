@@ -14,13 +14,13 @@ const QuestCard = () => {
 
   const [questData, setQuestData] = useState({
     alex_01: {
-      img: "/location.jpg",
+      img: "/assets/location.jpg",
       downloadable: true,
       title: "Alex_File01 - Report",
       fileName: "Location_data.csv",
       points: 0,
       answer: "test",
-      fileDownload: "/location_sheet.csv",
+      fileDownload: "/assets/location_sheet.csv",
       downloadTag: "Alex Data - Download",
       description:
         "Alex's location has been exposed in a leak, which isn't shocking given how many apps and services track user locations under the guise of service improvement. These entities frequently monitor and use location data for purposes such as targeted ads and creating detailed social profiles.",
@@ -77,11 +77,11 @@ const QuestCard = () => {
       ],
     },
     grace_02: {
-      img: "/medical.jpg",
+      img: "/assets/medical.jpg",
       downloadable: true,
       title: "95600_File02 - Report",
       fileName: "Medical_data.csv",
-      fileDownload: "/medical_data.csv",
+      fileDownload: "/assets/medical_data.csv",
       points: 0,
       answer: "test",
       downloadTag: "Grace Data - Download",
@@ -142,12 +142,12 @@ const QuestCard = () => {
       ],
     },
     ethan_03: {
-      img: "/search.jpg",
+      img: "/assets/search.jpg",
       downloadable: true,
       title: "Ethan_File03 - Report",
       fileName: "Search_data.csv",
       points: 0,
-      fileDownload: "/search_queries.csv",
+      fileDownload: "/assets/search_queries.csv",
       downloadTag: "Ethan Data - Download",
       description:
         "Ethan’s search history was exposed, raising concerns over increasing privacy violations, as numerous websites and ad networks monitor users’ browsing activities to deliver personalized content and targeted ads.",
@@ -204,7 +204,7 @@ const QuestCard = () => {
       ],
     },
     deepfake_04: {
-      img: "/deepfake.jpg",
+      img: "/assets/deepfake.jpg",
       downloadable: true,
       title: "Deepafake - Dataset",
       fileName: "Deepfake_data.csv",
@@ -262,12 +262,12 @@ const QuestCard = () => {
       ],
     },
     samuel_05: {
-      img: "/creditCard.jpg",
+      img: "/assets/creditCard.jpg",
       downloadable: true,
       title: "Samuel File05 - Report",
       fileName: "Credit_Transactions.csv",
       points: 0,
-      fileDownload: "/transactions.csv",
+      fileDownload: "/assets/transactions.csv",
       downloadTag: "Samuel Data - Download",
       description:
         "A credit transaction data leak has affected Samuel, highlighting concerns around financial data security as businesses adopt digital payments without implementing robust cyber attack defenses.",
@@ -332,12 +332,12 @@ const QuestCard = () => {
       ],
     },
     aurora_06: {
-      img: "/charity.jpg",
+      img: "/assets/charity.jpg",
       downloadable: true,
       title: "Aurora_File05 - Report",
       fileName: "Fitness.jpg",
       points: 0,
-      fileDownload: "/activityTracker.png",
+      fileDownload: "/assets/activityTracker.png",
       downloadTag: "Aurora Data - Download",
       description:
         "Tragically, Aurora suffered from a significant data leak revealing her fitness data collected through her smartwatch device and application, bringing attention to insufficient data protection standards among makers of wearables and software providers alike.",
@@ -393,7 +393,7 @@ const QuestCard = () => {
       img: "https://s3-eu-west-1.amazonaws.com/privacyquest-storage/quests/4/image.png",
       downloadable: false,
       title: "Natalie_File07 - Report",
-      fileName: "Mobile_app_usage",
+      fileName: "App_usage",
       points: 0,
       fileDownload: "/mobile/appUsage",
       downloadTag: "Natalie Phone - Checkout",
