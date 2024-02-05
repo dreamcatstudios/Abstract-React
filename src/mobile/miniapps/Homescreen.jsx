@@ -16,6 +16,7 @@ const Homescreen = () => {
     activities: "activities",
     instapost: "instapost",
     vault: "vault",
+    calculator: "calculator",
   };
 
   const dispatch = useDispatch();
@@ -110,9 +111,7 @@ const Homescreen = () => {
                 </svg>
               </div>
               <div
-                onClick={() =>
-                  window.open("https://www.google.com/gmail/about/", "_blank")
-                }
+                onClick={() => onAppClick(apps.calculator)}
                 className="bg-white w-14 h-14 rounded-full flex items-center justify-center"
               >
                 <svg
@@ -123,7 +122,7 @@ const Homescreen = () => {
                   height="1.2em"
                   className="text-black"
                 >
-                  <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path>
+                  <path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM7 12V14H9V12H7ZM7 16V18H9V16H7ZM11 12V14H13V12H11ZM11 16V18H13V16H11ZM15 12V18H17V12H15ZM7 6V10H17V6H7Z"></path>
                 </svg>
               </div>
               <div
@@ -175,11 +174,8 @@ const Homescreen = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  width="1.2em"
-                  height="1.2em"
-                  className="text-black"
                 >
-                  <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22H2L4.92893 19.0711C3.11929 17.2614 2 14.7614 2 12C2 6.47715 6.47715 2 12 2ZM16 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z"></path>
+                  <path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path>
                 </svg>
               </div>
               <div

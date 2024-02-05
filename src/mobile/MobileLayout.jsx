@@ -10,6 +10,7 @@ import Activities from "./miniapps/Activities";
 import { useParams } from "react-router-dom";
 import Instapost from "./miniapps/Instapost";
 import Vault from "./miniapps/Vault";
+import Calculator from "./miniapps/Calculator";
 
 const MobileLayout = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,8 @@ const MobileLayout = () => {
           return <Instapost />;
         case "vault":
           return <Vault />;
+        case "calculator":
+          return <Calculator />;
         default:
           break;
       }
