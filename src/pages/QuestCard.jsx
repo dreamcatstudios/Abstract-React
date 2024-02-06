@@ -76,7 +76,7 @@ const QuestCard = () => {
         },
       ],
     },
-    grace_02: {
+    "95600_02": {
       img: "/assets/medical.jpg",
       downloadable: true,
       title: "95600_File02 - Report",

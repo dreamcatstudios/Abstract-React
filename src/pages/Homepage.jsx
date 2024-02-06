@@ -12,7 +12,7 @@ const Homepage = () => {
     },
     {
       bg: "/assets/folder.png",
-      title: "Grace_02",
+      title: "95600_02",
     },
     {
       bg: "/assets/folder.png",
