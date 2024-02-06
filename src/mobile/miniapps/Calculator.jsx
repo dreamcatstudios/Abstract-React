@@ -34,7 +34,7 @@ const Calculator = () => {
     <div className="flex flex-col items-center justify-center h-full bg-black text-white relative">
       {/* Notch Code */}
       <div className="w-full flex justify-around top-2 absolute ">
-        {time.slice(0, time.lastIndexOf(" "))}
+        <h1 className="text-white">{time.slice(0, time.lastIndexOf(":"))}</h1>
         <div className="bg-black p-[12px] rounded-[100%]"></div>
         <div class="flex gap-1" data-v-4a86e42e="">
           <svg
