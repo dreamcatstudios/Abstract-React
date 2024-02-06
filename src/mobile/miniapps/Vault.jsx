@@ -114,7 +114,7 @@ const Vault = () => {
               <h2 className="text-2xl font-semibold mb-4">Vault</h2>
 
               {showVaultContent ? (
-                <p>Hi, this is it</p>
+                <p>{`Hi, your answer is {key}`}</p>
               ) : (
                 <div>
                   <div className="mb-4">

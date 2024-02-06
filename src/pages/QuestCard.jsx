@@ -280,7 +280,7 @@ const QuestCard = () => {
           answer: "3",
           explanation:
             "He has spent a total of $128.00 on groceries and $369.99 on entertainment.",
-          options: ["Groceries", "Unable to determine", "Entertainment"],
+          options: "[Groceries, Unable to determine, Entertainment]",
         },
         {
           level: 2,
@@ -291,7 +291,7 @@ const QuestCard = () => {
           answer: "3",
           explanation:
             "Expenses include fast food (Wendy's, McDonald's, Popeyes), dessert places (Baskin Robbins), and grocery stores. The exact food items aren't specified, making it challenging to definitively classify their dietary preference as vegan, non-vegetarian, or otherwise.",
-          options: ["Vegan", "Non-vegetarian", "Can't tell"],
+          options: "[Vegan, Non-vegetarian, Can't tell]",
         },
         {
           level: 3,
@@ -301,7 +301,7 @@ const QuestCard = () => {
           answer: "1",
           explanation:
             "We observe fluctuations in rental payments, suggesting that they may have moved at some point.",
-          options: ["Moved", "Uncertain", "Not recently changed residences"],
+          options: "[Moved, Uncertain, Not recently changed residences]",
         },
         {
           level: 4,
@@ -312,7 +312,7 @@ const QuestCard = () => {
           answer: "2",
           explanation:
             "Increasing credit card debt coupled with a low credit score indicates a financially precarious position.",
-          options: ["Good", "Poor", "Cannot say."],
+          options: "[Good, Poor, Cannot say.]",
         },
         {
           level: 5,
@@ -323,11 +323,7 @@ const QuestCard = () => {
           answer: "2",
           explanation:
             "There is no relevant information provided regarding the number of residents in the household within the dataset.",
-          options: [
-            "Lives alone",
-            "Undecipherable",
-            "Cohabits with family members",
-          ],
+          options: "[Lives alone,Undecipherable,Cohabits with family members]",
         },
       ],
     },
@@ -406,26 +402,29 @@ const QuestCard = () => {
           clicked: false,
           disabled: false,
           answer: "1",
-          explanation: "This is because of this",
+          explanation:
+            "Natalie app activities suggest that Natalie prefer more mainstream media.",
           options:
             "[politically engaged, mainstream media consumer, alternative sources]",
         },
         {
           level: 2,
           title: "What do we know about Natalie's language proficiency?",
-          answer: "test2",
-          explanation: "This is because of this",
+          answer: "1",
+          explanation:
+            "Duolingo app activities suggest that Natalie is multilingual.",
           clicked: false,
           disabled: false,
-          options: "[multilingual, bilingual, monolingual]",
+          options: "[multilingual, can't tell, monolingual]",
         },
         {
           level: 3,
           title: "What do we know about Natalie's social media habits?",
           clicked: false,
           disabled: false,
-          answer: "test3",
-          explanation: "This is because of this",
+          answer: "1",
+          explanation:
+            "Natalie app activities suggest that Natalie is a frequent user and constanly checks her social media.",
           options: "[frequent user, moderate user, seldom user]",
         },
         {
@@ -433,8 +432,8 @@ const QuestCard = () => {
           title: "What do we know about Natalie's technology usage?",
           clicked: false,
           disabled: false,
-          answer: "test4",
-          explanation: "This is because of this",
+          answer: "1",
+          explanation: "Recommended smart phone activities suggest that Natalie is a smartphone addict.",
           options:
             "[smartphone addict, computer reliant, minimalistic approach]",
         },
@@ -443,8 +442,8 @@ const QuestCard = () => {
           title: "What do we know about Natalie's relationship status?",
           clicked: false,
           disabled: false,
-          answer: "test5",
-          explanation: "This is because of this",
+          answer: "1",
+          explanation: "Tinder app activities suggest that Natalie is single.",
           options: "[single, married, can't tell]",
         },
       ],
@@ -465,7 +464,7 @@ const QuestCard = () => {
           title: "What is the secret key stored within the vault application?",
           clicked: false,
           disabled: false,
-          answer: "1",
+          answer: "{key}",
           explanation: "This is because of this",
           options: "",
         },
