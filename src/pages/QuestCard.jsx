@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CryptoJS from "crypto-js"; // Import CryptoJS
+import { animateScroll as scroll } from "react-scroll";
 
 const QuestCard = () => {
   const [userAnswer, setUserAnswer] = useState("");
@@ -13,6 +14,9 @@ const QuestCard = () => {
   const { name } = useParams();
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    scroll.scrollToTop({ duration: 150, smooth: true });
+  };
   // Define your secret key for decryption
   const decryptionKey = "absd*U#(Eajdn";
 
@@ -70,6 +74,7 @@ const QuestCard = () => {
   }, [name, questionStatus]);
 
   const onAnswerSubmit = (index) => {
+    scrollToTop();
     const correctAnswer = selectedQuest.learningPath[index].answer;
     const currentQuest = questData[name.toLowerCase()];
 
@@ -116,11 +121,13 @@ const QuestCard = () => {
 
   const onDownloadClick = (e) => {
     e.stopPropagation();
+    scrollToTop();
     toast.success("File Downloaded! Check your downloads folder");
   };
 
   const finishData = () => {
     // Check if all questions are answered
+    scrollToTop();
     const answeredQuestions = Object.keys(questionStatus).map(Number);
 
     if (answeredQuestions.length === selectedQuest.learningPath.length) {
