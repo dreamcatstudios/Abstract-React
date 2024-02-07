@@ -3,7 +3,7 @@ import React from "react";
 const Instapost = () => {
   const [time, setTime] = React.useState(new Date().toLocaleTimeString());
   const user = {
-    username: "sokhushyy_",
+    username: "surbhi_sv",
     image: "https://placekitten.com/100/100", // Replace with your profile image URL
     followers: 1000,
     following: 500,
@@ -14,11 +14,11 @@ const Instapost = () => {
   const posts = [
     {
       id: 1,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "Image of a concert",
       userImage: "https://placekitten.com/500/500", // Replace with the user's profile image URL
       postImage:
-        "https://cdn.pixabay.com/photo/2014/12/12/10/49/music-565244_1280.jpg", // Replace with your image URL
+        "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg", // Replace with your image URL
       likes: 150,
       location: "Concert",
       caption:
@@ -27,7 +27,7 @@ const Instapost = () => {
     },
     {
       id: 2,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "Image of a little kitten named Milo",
       userImage: "https://placekitten.com/500/500", // Replace with the user's profile image URL
       postImage:
@@ -39,11 +39,11 @@ const Instapost = () => {
     },
     {
       id: 3,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "",
       userImage: "https://placekitten.com/500/500", // Replace with the user's profile image URL
       postImage:
-        "https://cdn.pixabay.com/photo/2019/09/08/20/48/friends-4461896_1280.jpg", // Replace with your image URL
+        "https://images.pexels.com/photos/3491940/pexels-photo-3491940.jpeg", // Replace with your image URL
       likes: 200,
       location: "California",
       caption: "Now this was a fun day with friends!! 🤠 #friendsforever",
@@ -51,12 +51,12 @@ const Instapost = () => {
     },
     {
       id: 4,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "Image of a trendy street art",
       userImage:
         "https://cdn.pixabay.com/photo/2023/07/28/15/14/wall-8155414_1280.jpg",
       postImage:
-        "https://cdn.pixabay.com/photo/2023/03/29/16/53/street-art-7885965_1280.jpg",
+        "https://images.pexels.com/photos/1570264/pexels-photo-1570264.jpeg",
       likes: 120,
       location: "Urban Jungle",
       caption: "Exploring the city vibes and street art! 🌆✨ #CityExplorer",
@@ -64,11 +64,11 @@ const Instapost = () => {
     },
     {
       id: 5,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "Image of a gaming setup",
       userImage: "https://placekitten.com/500/500",
       postImage:
-        "https://cdn.pixabay.com/photo/2021/03/17/14/39/gaming-6102500_1280.jpg",
+        "https://images.pexels.com/photos/10752815/pexels-photo-10752815.jpeg",
       likes: 180,
       location: "Gamer's Paradise",
       caption: "Gaming all day, every day! 🎮🕹️ #GamerLife",
@@ -76,11 +76,11 @@ const Instapost = () => {
     },
     {
       id: 6,
-      username: "sokhushyy_",
+      username: "surbhi_sv",
       alt: "Image of a vibrant sunset",
       userImage: "https://placekitten.com/500/500",
       postImage:
-        "https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080_1280.jpg",
+        "https://images.pexels.com/photos/92664/pexels-photo-92664.jpeg",
       likes: 250,
       location: "Chasing Sunsets",
       caption:
@@ -187,7 +187,7 @@ const Instapost = () => {
                     <img
                       src={post.postImage}
                       alt="Post"
-                      className="w-full rounded-md mb-4"
+                      className="w-full   rounded-sm mb-2"
                     />
 
                     {/* Likes Section */}
