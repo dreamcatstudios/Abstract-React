@@ -161,7 +161,7 @@ const QuestCard = () => {
   };
 
   return (
-    <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] h-full w-full">
+    <div class="bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] h-full w-full min-h-screen">
       <div className="h-full w-full container flex flex-col justify-center items-center">
         <ToastContainer />
         <div className="w-full h-full flex flex-col justify-between ">
