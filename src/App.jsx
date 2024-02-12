@@ -6,7 +6,6 @@ import "./App.css";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import QuestCard from "./pages/QuestCard";
-import Points from "./pages/Points";
 import Mobile from "./mobile/MobileLayout";
 import { mobileStore } from "./mobile/store/MobileStore";
 import ChatBot from "./components/ChatBot";
@@ -40,8 +39,6 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
-
-            <Route path="/points" element={<Points />} />
             <Route path="/mobile/:level" element={<Mobile />} />
             <Route path="/file/:name" element={<QuestCard />} />
             <Route path="/scores" element={<Scores />} />

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const ChatBot = ({ toggleChatBot }) => {
   const initialMessages = [
     {
-      text: "Welcome, Officer. Today marks the beginning of your involvement in a discreet governmental initiative.",
+      text: "Welcome, Agent. Today marks the beginning of your involvement in a discreet governmental initiative.",
       delay: 1000,
     },
     {
@@ -19,7 +19,7 @@ const ChatBot = ({ toggleChatBot }) => {
       delay: 5000,
     },
     {
-      text: "Remember, Officer, your actions influence the success of this initiative. Keep a low profile and ensure the seamless execution of your duties.",
+      text: "Remember, Agent, your actions influence the success of this initiative. Keep a low profile and ensure the seamless execution of your duties.",
       delay: 5000,
     },
   ];
