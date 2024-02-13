@@ -111,10 +111,10 @@ const Vault = () => {
         <div className="h-full w-full flex items-center justify-center">
           <div className="w-full h-full  flex flex-col justify-center items-center">
             <div className=" p-8  rounded-md shadow-md">
-              <h2 className="text-2xl font-semibold mb-4">Vault</h2>
+              <h2 className="text-2xl text-center font-semibold mb-4">Vault</h2>
 
               {showVaultContent ? (
-                <p>{`Hi, your answer is {key}`}</p>
+                <p className="text-center">{`Hi, your key is key{FLAGatCODE!}`}</p>
               ) : (
                 <div>
                   <div className="mb-4">
