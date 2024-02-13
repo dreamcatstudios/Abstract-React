@@ -261,7 +261,7 @@ const QuestCard = () => {
                                 value={userAnswer}
                                 onChange={(e) => setUserAnswer(e.target.value)}
                                 onClick={onInputClick} // Bind the onInputClick function here
-                                className="h-10 p-2 w-full sm:w-auto text-black rounded-sm"
+                                className="h-10 p-2 w-full sm:w-auto text-black rounded-sm border border-black"
                               >
                                 {item.options.map((option, i) => (
                                   <option key={i} value={option}>
